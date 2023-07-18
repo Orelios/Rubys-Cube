@@ -20,6 +20,17 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded;
 
+    Camera cam;
+    public Interactable focus;
+    private bool interacting = false;
+    Vector3 pos = new Vector3(100f, 100f, 0);
+
+
+    void Start()
+    {
+        cam = Camera.main;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -41,5 +52,49 @@ public class PlayerMovement : MonoBehaviour
         //Moves the character when they are falling down based on the gravity and velocity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Ray ray = cam.ScreenPointToRay(pos);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100)) //Set Focus to the object
+            {
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
+
+                if (interactable != null && interacting == true)
+                {
+                    Debug.Log("Remove Focus");
+                    RemoveFocus();
+                }
+
+                if (interactable != null && interacting == false)
+                {
+                    Debug.Log("Add Focus");
+                    SetFocus(interactable);
+                }
+
+                if (interacting == false)
+                {
+                    interacting = true;
+                }
+
+                else
+                {
+                    interacting = false;
+                }
+            }
+        }
+    }
+
+    void SetFocus (Interactable newFocus)
+    {
+        focus = newFocus;
+    }
+
+    void RemoveFocus()
+    {
+        focus = null;
     }
 }
