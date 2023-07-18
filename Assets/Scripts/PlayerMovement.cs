@@ -19,16 +19,17 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
 
     bool isGrounded;
+    bool isMoveable = true;
 
+    //Used to check what's infront of the player so that they can interact
     Camera cam;
     public Interactable focus;
-    private bool interacting = false;
-    Vector3 pos = new Vector3(100f, 100f, 0);
+    private bool isInteracting = false;
 
 
     void Start()
     {
-        cam = Camera.main;
+        cam = Camera.main; //Gets the Camera
     }
 
     // Update is called once per frame
@@ -43,46 +44,43 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-        //Move player in a direction
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        if (isMoveable)
+        {
+            //Move player in a direction
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * x + transform.forward * z;
+            controller.Move(move * moveSpeed * Time.deltaTime);
+        }
 
         //Moves the character when they are falling down based on the gravity and velocity
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)) //Interaction
         {
-            Ray ray = cam.ScreenPointToRay(pos);
+            Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit, 100)) //Set Focus to the object
+            if (Input.GetKeyDown(KeyCode.E) && isInteracting == true) //Remove Interaction
+            {
+                Debug.Log("Remove Focus");
+                RemoveFocus(); //Remove your focus
+                isMoveable = true; //Enable Player Movement
+                isInteracting = false;
+            }
+
+            else if (Physics.Raycast(ray, out hit, 100)) //Add Interaction
             {
                 Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                if (interactable != null && interacting == true)
-                {
-                    Debug.Log("Remove Focus");
-                    RemoveFocus();
-                }
-
-                if (interactable != null && interacting == false)
+                if (interactable != null && isInteracting == false && hit.collider.GetComponent<Interactable>().withinRange == true)
                 {
                     Debug.Log("Add Focus");
-                    SetFocus(interactable);
-                }
-
-                if (interacting == false)
-                {
-                    interacting = true;
-                }
-
-                else
-                {
-                    interacting = false;
+                    SetFocus(interactable); //Sets it as the focus on what you're interacting with
+                    isMoveable = false; //Disable Player Movement
+                    isInteracting = true;
                 }
             }
         }
