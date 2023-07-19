@@ -5,6 +5,7 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public GameObject component;
+    public GameObject selector; 
     private bool activeScene = true; 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,14 @@ public class OpenInventory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && activeScene == false)
         {
             component.SetActive(true);
+            selector.SetActive(true);
             activeScene = true;
         }
 
         else if(Input.GetKeyDown(KeyCode.Q) && activeScene == true)
         {
             component.SetActive(false);
+            selector.SetActive(false);
             activeScene = false;
         }
     }
