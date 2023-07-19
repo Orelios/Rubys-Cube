@@ -19,7 +19,7 @@ public class RaycastController : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastDistance, layerMask))
         {
-            if(hit.collider.TryGetComponent<Interactable>(out Interactable interactable))
+            if(hit.collider.TryGetComponent<InteractableObject>(out InteractableObject interactable))
             {
                 if (Input.GetMouseButtonDown(0))
                 {
