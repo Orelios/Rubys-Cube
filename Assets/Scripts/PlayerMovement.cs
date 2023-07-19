@@ -79,8 +79,12 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Debug.Log("Add Focus");
                     SetFocus(interactable); //Sets it as the focus on what you're interacting with
-                    isMoveable = false; //Disable Player Movement
                     isInteracting = true;
+
+                    if (hit.collider.GetComponent<Interactable>().type == ObjectType.NPC)
+                    {
+                        isMoveable = false; //Disable Player Movement
+                    }
                 }
             }
         }

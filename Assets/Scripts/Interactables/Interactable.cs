@@ -1,7 +1,14 @@
 using UnityEngine;
 
+public enum ObjectType
+{
+    NPC,
+    Item
+}
+
 public class Interactable : MonoBehaviour
 {
+    public ObjectType type;
     public float detectionRadius = 3f;
     public bool withinRange = false;
     public LayerMask playerLayer;
