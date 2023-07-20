@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     //Reference: FIRST PERSON MOVEMENT in Unity - FPS Controller by Brackeys
 
     public CharacterController controller;
+    public GameObject DialogueBox;
 
     public float moveSpeed = 12f;
     public float gravity = -10f;
@@ -18,13 +19,13 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 velocity;
 
-    bool isGrounded;
-    bool isMoveable = true;
+    public bool isGrounded;
+    public bool isMoveable = true;
 
     //Used to check what's infront of the player so that they can interact
     Camera cam;
     public NPCInteractable focus;
-    private bool isInteracting = false;
+    public bool isInteracting = false; 
 
 
     void Start()
@@ -63,40 +64,21 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
 
-            if (Input.GetKeyDown(KeyCode.E) && isInteracting == true) //Remove Interaction
-            {
-                Debug.Log("Remove Focus");
-                RemoveFocus(); //Remove your focus
-                isMoveable = true; //Enable Player Movement
-                isInteracting = false;
-            }
-
-            else if (Physics.Raycast(ray, out hit, 100)) //Add Interaction
+            if (Physics.Raycast(ray, out hit, 100)) //Add Interaction
             {
                 NPCInteractable interactable = hit.collider.GetComponent<NPCInteractable>();
 
                 if (interactable != null && isInteracting == false && hit.collider.GetComponent<NPCInteractable>().withinRange == true)
                 {
                     Debug.Log("Add Focus");
-                    SetFocus(interactable); //Sets it as the focus on what you're interacting with
+                    isMoveable = false; //Disable Player Movement
                     isInteracting = true;
 
-                    if (hit.collider.GetComponent<NPCInteractable>().type == ObjectType.NPC)
-                    {
-                        isMoveable = false; //Disable Player Movement
-                    }
+                    DialogueBox.SetActive(true);
+                    DialogueBox.GetComponent<Dialogue>().lines = (string[])hit.collider.GetComponent<NPCInteractable>().NPCLines.Clone();   
                 }
             }
         }
     }
 
-    void SetFocus (NPCInteractable newFocus)
-    {
-        focus = newFocus;
-    }
-
-    void RemoveFocus()
-    {
-        focus = null;
-    }
 }
