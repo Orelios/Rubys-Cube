@@ -3,7 +3,7 @@ using UnityEngine;
 public enum ObjectType
 {
     NPC,
-    Item
+    Object
 }
 
 public class NPCInteractable : MonoBehaviour
@@ -12,6 +12,7 @@ public class NPCInteractable : MonoBehaviour
     public float detectionRadius = 3f;
     public bool withinRange = false;
     public LayerMask playerLayer;
+    public string[] NPCLines;
 
     //Create the Gizmo so you can see the radius
     void OnDrawGizmosSelected()
