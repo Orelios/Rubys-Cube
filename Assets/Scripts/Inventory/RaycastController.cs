@@ -21,7 +21,7 @@ public class RaycastController : MonoBehaviour
         {
             if(hit.collider.TryGetComponent<InteractableObject>(out InteractableObject interactable))
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact();
                     Debug.Log("It hit");

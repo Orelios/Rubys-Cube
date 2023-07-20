@@ -6,7 +6,7 @@ public enum ObjectType
     Item
 }
 
-public class Interactable : MonoBehaviour
+public class NPCInteractable : MonoBehaviour
 {
     public ObjectType type;
     public float detectionRadius = 3f;
