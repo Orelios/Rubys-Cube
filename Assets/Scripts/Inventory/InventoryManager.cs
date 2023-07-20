@@ -10,7 +10,12 @@ public class InventoryManager : MonoBehaviour
     public GameObject slotHolder;
     public GameObject[] slots;
 
-    public List<ItemClass> items = new List<ItemClass>();
+    [SerializeField] private GameObject selector; 
+    [SerializeField] private int selectedSlotNum = 0;
+    public ItemClass selectedItem;
+
+
+    public List<SlotClass> items = new List<SlotClass>();
 
     public void Awake()
     {
@@ -28,6 +33,28 @@ public class InventoryManager : MonoBehaviour
         RefreshUI();
     }
 
+    private void Update()
+    {
+        int i = selectedSlotNum; 
+        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        {
+            selectedSlotNum = Mathf.Clamp(i + 1, 0, slots.Length -1);
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+        {
+            selectedSlotNum = Mathf.Clamp(i - 1, 0, slots.Length -1);
+        }
+        selector.transform.position = slots[selectedSlotNum].transform.position;
+        try
+        {
+            selectedItem = items[i].GetItem();
+        }
+        catch
+        {
+            selectedItem = null;
+        }
+    }
+
     public void RefreshUI()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -35,7 +62,7 @@ public class InventoryManager : MonoBehaviour
             try
             {
                 slots[i].transform.GetChild(0).GetComponent<Image>().enabled = true;
-                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].itemIcon;
+                slots[i].transform.GetChild(0).GetComponent<Image>().sprite = items[i].GetItem().itemIcon;
             }
             catch
             {
@@ -48,7 +75,24 @@ public class InventoryManager : MonoBehaviour
 
     public void Add(ItemClass item)
     {
-        items.Add(item);
+        //items.Add(item);
+        items.Add(new SlotClass(item));
+        RefreshUI();
+    }
+
+    public void Remove(ItemClass item)
+    {
+        SlotClass slotRemove = new SlotClass();
+        foreach (SlotClass slot in items)
+        {
+            if(slot.GetItem() == item)
+            {
+                slotRemove = slot;
+                break;
+            }
+        }
+
+        items.Remove(slotRemove);
         RefreshUI();
     }
 }
