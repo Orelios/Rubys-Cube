@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Used to check what's infront of the player so that they can interact
     Camera cam;
-    public Interactable focus;
+    public NPCInteractable focus;
     private bool isInteracting = false;
 
 
@@ -73,15 +73,15 @@ public class PlayerMovement : MonoBehaviour
 
             else if (Physics.Raycast(ray, out hit, 100)) //Add Interaction
             {
-                Interactable interactable = hit.collider.GetComponent<Interactable>();
+                NPCInteractable interactable = hit.collider.GetComponent<NPCInteractable>();
 
-                if (interactable != null && isInteracting == false && hit.collider.GetComponent<Interactable>().withinRange == true)
+                if (interactable != null && isInteracting == false && hit.collider.GetComponent<NPCInteractable>().withinRange == true)
                 {
                     Debug.Log("Add Focus");
                     SetFocus(interactable); //Sets it as the focus on what you're interacting with
                     isInteracting = true;
 
-                    if (hit.collider.GetComponent<Interactable>().type == ObjectType.NPC)
+                    if (hit.collider.GetComponent<NPCInteractable>().type == ObjectType.NPC)
                     {
                         isMoveable = false; //Disable Player Movement
                     }
@@ -90,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void SetFocus (Interactable newFocus)
+    void SetFocus (NPCInteractable newFocus)
     {
         focus = newFocus;
     }
