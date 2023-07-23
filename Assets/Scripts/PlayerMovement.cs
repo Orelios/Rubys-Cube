@@ -24,8 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Used to check what's infront of the player so that they can interact
     Camera cam;
-    public NPCInteractable focus;
-    public bool isInteracting = false; 
+    public NPCInteractable interactable;
+    public bool isInteracting = false;
+    public GameObject buttonCanvas;
+    public GameObject button1;
+    public GameObject button2;
+    public bool choosing = false;
+    private int index = 1;
 
 
     void Start()
@@ -66,19 +71,68 @@ public class PlayerMovement : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit, 100)) //Add Interaction
             {
-                NPCInteractable interactable = hit.collider.GetComponent<NPCInteractable>();
+                interactable = hit.collider.GetComponent<NPCInteractable>();
 
-                if (interactable != null && isInteracting == false && hit.collider.GetComponent<NPCInteractable>().withinRange == true)
+                if (interactable != null && isInteracting == false && interactable.GetComponent<NPCInteractable>().withinRange == true)
                 {
+                    
                     Debug.Log("Add Focus");
                     isMoveable = false; //Disable Player Movement
                     isInteracting = true;
 
                     DialogueBox.SetActive(true);
-                    DialogueBox.GetComponent<Dialogue>().lines = (string[])hit.collider.GetComponent<NPCInteractable>().NPCLines.Clone();   
+                    DialogueBox.GetComponent<Dialogue>().lines = (string[])interactable.GetComponent<NPCInteractable>().NPCLines.Clone();
+
+                    if (interactable.GetComponent<NPCInteractable>().branchingDialogue == true)
+                    {
+                        DialogueBox.GetComponent<Dialogue>().branching = true;
+                    }
+                    
                 }
             }
         }
-    }
 
+        if (DialogueBox.GetComponent<Dialogue>().endLineChecker == true)
+        {
+            buttonCanvas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            if (index == 1)
+            {
+                button1.GetComponent<DialogueButton>().textComponent.text = interactable.GetComponent<NPCInteractable>().branchAnswers1;
+                index++;
+            }
+
+            if (index == 2)
+            {
+                button2.GetComponent<DialogueButton>().textComponent.text = interactable.GetComponent<NPCInteractable>().branchAnswers2;
+                index = 1;
+            }
+
+            if (button1.GetComponent<DialogueButton>().pressed == true)
+            {
+                DialogueBox.GetComponent<Dialogue>().lines = (string[])interactable.GetComponent<NPCInteractable>().branchingLines1.Clone();
+                DialogueBox.GetComponent<Dialogue>().branching = false;
+                DialogueBox.GetComponent<Dialogue>().endLineChecker = false;
+                DialogueBox.GetComponent<Dialogue>().index = 0;
+                Cursor.lockState = CursorLockMode.Locked;
+                button1.GetComponent<DialogueButton>().pressed = false;
+                buttonCanvas.SetActive(false);
+                
+            }
+
+            else if (button2.GetComponent<DialogueButton>().pressed == true)
+            {
+                DialogueBox.GetComponent<Dialogue>().lines = (string[])interactable.GetComponent<Collider>().GetComponent<NPCInteractable>().branchingLines2.Clone();
+                DialogueBox.GetComponent<Dialogue>().branching = false;
+                DialogueBox.GetComponent<Dialogue>().endLineChecker = false;  
+                DialogueBox.GetComponent<Dialogue>().index = 0;
+                Cursor.lockState = CursorLockMode.Locked;
+                button2.GetComponent<DialogueButton>().pressed = false;
+                buttonCanvas.SetActive(false);
+                
+            }
+        }
+    }
 }
+
+
