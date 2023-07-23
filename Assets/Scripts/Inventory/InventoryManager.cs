@@ -95,4 +95,20 @@ public class InventoryManager : MonoBehaviour
         items.Remove(slotRemove);
         RefreshUI();
     }
+    public void Search(ItemClass item, bool fragment)
+    {
+        SlotClass slotRemove = new SlotClass();
+        foreach (SlotClass slot in items)
+        {
+            if (slot.GetItem() == item)
+            {
+                slotRemove = slot;
+                fragment = true;
+                break;
+            }
+        }
+
+        items.Remove(slotRemove);
+        RefreshUI();
+    }
 }

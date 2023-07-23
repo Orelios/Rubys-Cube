@@ -13,5 +13,8 @@ public abstract class ItemClass : ScriptableObject
     }
     public abstract ItemClass GetItem();
     public abstract TestClass1 GetTestClass1(); 
-    public abstract TestClass2 GetTestClass2(); 
+    public abstract TestClass2 GetTestClass2();
+    public abstract Side3Fragments GetSide3Fragments();
+    public abstract Side1Fragments GetSide1Fragments(); 
+
 }

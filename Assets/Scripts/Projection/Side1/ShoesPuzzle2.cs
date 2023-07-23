@@ -7,6 +7,7 @@ public class ShoesPuzzle2 : InteractableObject
     public Projection1 projection;
     public override void Interact()
     {
+        projection.CheckProjectionFragments();
         Destroy(gameObject);
     }
 }
