@@ -10,7 +10,9 @@ public class Dialogue : MonoBehaviour
     public GameObject dialogueBox;
     public string[] lines;
     public float textSpeed;
-    private int index = 0;
+    public int index = 0;
+    public bool branching = false;
+    public bool endLineChecker = false;
     public bool notFirst = false;
     public bool startLine = false;
 
@@ -25,7 +27,9 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        
+
+        if (Input.GetMouseButtonDown(0) && endLineChecker == false)
         {
             if (textComponent.text == lines[index])
             {
@@ -42,7 +46,6 @@ public class Dialogue : MonoBehaviour
         if (startLine == true && notFirst == true)
         {
             StartDialogue();
-            Debug.Log("Bruh");
             startLine = false;
             
         }
@@ -70,20 +73,31 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if (index < lines.Length - 1)
+        
+        if (index < lines.Length - 1 && endLineChecker == false)
         {
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
+
         else
         {
             index = 0;
-            player.GetComponent<PlayerMovement>().isMoveable = true;
-            player.GetComponent<PlayerMovement>().isInteracting = false;
-            textComponent.text = string.Empty;
-            notFirst = true;
-            gameObject.SetActive(false);
+            if (branching == true)
+            {
+                endLineChecker = true;
+                Debug.Log("EndLine");
+            }
+            else
+            {
+                player.GetComponent<PlayerMovement>().isMoveable = true;
+                player.GetComponent<PlayerMovement>().isInteracting = false;
+                textComponent.text = string.Empty;
+                notFirst = true;
+                gameObject.SetActive(false);
+            }
+            
         }
     }
 }

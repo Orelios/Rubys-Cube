@@ -3,18 +3,30 @@ using UnityEngine;
 public enum ObjectType
 {
     NPC,
-    Object
+    Object  
+}
+
+public enum NPCBranchType
+{
+    Branch1,
+    Branch2
 }
 
 public class NPCInteractable : MonoBehaviour
 {
     public ObjectType type;
+    public BranchType npc_Branch;
     public float detectionRadius = 3f;
     public bool withinRange = false;
     public LayerMask playerLayer;
     public string[] NPCLines;
+    public bool branchingDialogue = false;
+    public string branchAnswers1;
+    public string branchAnswers2;
+    public string[] branchingLines1;
+    public string[] branchingLines2;
 
-    //Create the Gizmo so you can see the radius
+    //Create the Giz1o so you can see the radius
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
