@@ -13,4 +13,6 @@ public class TestClass1 : ItemClass
     public override ItemClass GetItem() { return this; }
     public override TestClass1 GetTestClass1() { return this; }
     public override TestClass2 GetTestClass2() { return null; }
+    public override Side3Fragments GetSide3Fragments() { return null; }
+    public override Side1Fragments GetSide1Fragments() { return null; }
 }
