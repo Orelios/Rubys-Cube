@@ -12,8 +12,10 @@ public class DetectSide : MonoBehaviour
     LayerMask side;
 
     public TextMeshProUGUI sideInfo;
+    public TextMeshProUGUI sideLocked;
 
     private bool sideHover = false;
+    public bool locked = false;
 
     private RaycastHit hit;
 
@@ -30,6 +32,17 @@ public class DetectSide : MonoBehaviour
             Side side = hit.collider.GetComponent("Side") as Side;
             Debug.Log("Changed name! " + side.id);
             sideInfo.text = side.id;
+
+            locked = side.locked;
+
+            if(locked == true)
+            {
+                sideLocked.enabled = true;
+            }
+            else if(locked == false)
+            {
+                sideLocked.enabled = false;
+            }
         }
         else if(!sideHover)
         {
