@@ -5,4 +5,5 @@ using UnityEngine;
 public class Side : MonoBehaviour
 {
     public string id;
+    public bool locked;
 }

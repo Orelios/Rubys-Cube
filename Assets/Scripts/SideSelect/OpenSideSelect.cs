@@ -8,6 +8,7 @@ public class OpenSideSelect : MonoBehaviour
     public GameObject sideSelectCamera; 
     public GameObject playerCamera;
     public GameObject player;
+    public DetectSide detectSide;
 
     public Transform playerP;
     public Transform spawn;
@@ -44,16 +45,24 @@ public class OpenSideSelect : MonoBehaviour
 
     public void Select()
     {
-        canvas.SetActive(false);
-        sideSelectCamera.SetActive(false);
-        playerCamera.SetActive(true);
+        if(detectSide.locked = true)
+        {
+            Debug.Log("Side is locked!");
+        }
+        if(detectSide.locked = false)
+        {
+            canvas.SetActive(false);
+            sideSelectCamera.SetActive(false);
+            playerCamera.SetActive(true);
 
-        Debug.Log("Player Teleported!");
+            Debug.Log("Player Teleported!");
     
-        player.SetActive(false);
-        playerP.position = spawn.position;
-        player.SetActive(true);
+            player.SetActive(false);
+            playerP.position = spawn.position;
+            player.SetActive(true);
 
-        LockMouse();
+            LockMouse();
+        }
+
     }
 }
