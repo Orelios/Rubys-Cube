@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenSideSelect : MonoBehaviour
 {
     public GameObject canvas;
-    public GameObject sideSelectCamera; 
+    public GameObject sideSelectCamera;
     public GameObject playerCamera;
     public GameObject player;
     public DetectSide detectSide;
@@ -45,18 +45,18 @@ public class OpenSideSelect : MonoBehaviour
 
     public void Select()
     {
-        if(detectSide.locked = true)
+        if(detectSide.locked == true)
         {
             Debug.Log("Side is locked!");
         }
-        if(detectSide.locked = false)
+        if(detectSide.locked == false)
         {
             canvas.SetActive(false);
             sideSelectCamera.SetActive(false);
             playerCamera.SetActive(true);
 
             Debug.Log("Player Teleported!");
-    
+
             player.SetActive(false);
             playerP.position = spawn.position;
             player.SetActive(true);
