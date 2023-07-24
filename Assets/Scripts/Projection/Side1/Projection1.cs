@@ -55,9 +55,22 @@ public class Projection1 : InteractableObject
     }
     public override void Interact()
     {
-        InventoryManager.Instance.Search(Necklace, collectedShoes);
-        InventoryManager.Instance.Search(Shoes, collectedNecklace);
-        InventoryManager.Instance.Search(SummerSunflower, collectedSummerSunflower);
+        if (InventoryManager.Instance.SearchFor(Necklace) == true)
+        {
+            collectedNecklace = true;
+            InventoryManager.Instance.Remove(Necklace);
+        }
+        if (InventoryManager.Instance.SearchFor(Shoes) == true)
+        {
+            collectedShoes = true;
+            InventoryManager.Instance.Remove(Shoes);
+        }
+        if (InventoryManager.Instance.SearchFor(SummerSunflower) == true)
+        {
+            collectedSummerSunflower = true;
+            InventoryManager.Instance.Remove(SummerSunflower);
+        }
+
         CheckProjectionFragments();
         CheckProjectionCompletion(); 
     }

@@ -59,9 +59,22 @@ public class Projection3 : InteractableObject
     }
     public override void Interact()
     {
-        InventoryManager.Instance.Search(photoFrame, collectedPhotoFrame);
-        InventoryManager.Instance.Search(familyPhoto, collectedFamilyPhoto);
-        InventoryManager.Instance.Search(glassCover, collectedGlassCover);
+        if (InventoryManager.Instance.SearchFor(photoFrame) == true)
+        {
+            collectedPhotoFrame = true;
+            InventoryManager.Instance.Remove(photoFrame);
+        }
+        if (InventoryManager.Instance.SearchFor(familyPhoto) == true)
+        {
+            collectedFamilyPhoto = true;
+            InventoryManager.Instance.Remove(familyPhoto);
+        }
+        if (InventoryManager.Instance.SearchFor(glassCover) == true)
+        {
+            collectedGlassCover = true;
+            InventoryManager.Instance.Remove(glassCover);
+        }
+
         CheckProjectionFragments();
         CheckProjectionCompletion(); 
     }
