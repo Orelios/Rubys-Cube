@@ -111,4 +111,18 @@ public class InventoryManager : MonoBehaviour
         items.Remove(slotRemove);
         RefreshUI();
     }
+    public bool SearchFor(ItemClass item)
+    {
+        foreach (SlotClass slot in items)
+        {
+            if (slot.GetItem() == item)
+            {
+                //itemFound = true;
+                //Debug.Log("Item Found");
+                //break;
+                return true;
+            }
+        }
+        return false;
+    }
 }

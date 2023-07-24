@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3858966219023866517}
   - component: {fileID: 4193490002780969315}
   - component: {fileID: 6950944665761711887}
-  - component: {fileID: 4724477098739358025}
+  - component: {fileID: 6213982209743399439}
   m_Layer: 3
   m_Name: Mask1 (To Grab)
   m_TagString: Untagged
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemClass: {fileID: 11400000, guid: 7fc44f12be83f1b47bdf9e2b34b2b1b2, type: 2}
---- !u!65 &4724477098739358025
+--- !u!65 &6213982209743399439
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,5 +155,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 23.738256, y: 19.040182, z: 35.39501}
-  m_Center: {x: -0.60189575, y: -0.032412365, z: 14.937291}
+  m_Size: {x: 19.864073, y: 3.7746997, z: 32.690716}
+  m_Center: {x: 0.646734, y: -1.3872612, z: 13.4058275}

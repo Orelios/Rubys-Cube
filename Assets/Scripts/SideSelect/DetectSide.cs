@@ -27,10 +27,10 @@ public class DetectSide : MonoBehaviour
         if(sideHover)
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * raycastDistance, Color.red);
-            /*Debug.Log("Collided with side!");*/
+            //Debug.Log("Collided with side!");
 
             Side side = hit.collider.GetComponent("Side") as Side;
-            /*Debug.Log("Changed name! " + side.id);*/
+            //Debug.Log("Changed name! " + side.id);
             sideInfo.text = side.id;
 
             locked = side.locked;
