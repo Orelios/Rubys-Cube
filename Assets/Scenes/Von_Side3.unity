@@ -23684,11 +23684,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ae7fb47ef7114d449b2fc18308bf86b, type: 3}
---- !u!1 &1375465064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4869260290819873471, guid: 75e8b61ddc62bfe4bacc78ca59e29186, type: 3}
-  m_PrefabInstance: {fileID: 5715771331821842412}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1377043055
 GameObject:
   m_ObjectHideFlags: 0
@@ -32793,11 +32788,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3594e37a6f7b47b48ab74c816894a59f, type: 3}
---- !u!1 &1862801997 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8787121801721677958, guid: 61c9ea52df1d88144b635fa1d2ec8157, type: 3}
-  m_PrefabInstance: {fileID: 8787664863730798927}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1866029012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8997288894958524352, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
@@ -37221,8 +37211,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPuzzleComplete: 0
   FamilyPhoto: {fileID: 1128641269}
-  Urn: {fileID: 1862801997}
-  SummerSunflower: {fileID: 1375465064}
+  Urn: {fileID: 0}
+  SummerSunflower: {fileID: 0}
   photoFrame: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
