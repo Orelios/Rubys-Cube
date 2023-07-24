@@ -54,6 +54,7 @@ public class Pedestal : InteractableObject
             }
             else
             {
+                //spawn items above pedestal
                 Debug.Log("Incorrect sequence");
             }
         }
@@ -65,6 +66,8 @@ public class Pedestal : InteractableObject
         if(itemFound == true)
         {
             InventoryManager.Instance.Remove(puzzleItem);
+            //spawn item in world
+            itemPlaced = true;
             sequence = 1 + otherPedestal1.CheckItemPlaced() + otherPedestal2.CheckItemPlaced();
             CheckSequence();
             CheckAttempt();
