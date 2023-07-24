@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9530,7 +9530,7 @@ MonoBehaviour:
   controller: {fileID: 586457991}
   DialogueBox: {fileID: 1326196832}
   projection: {fileID: 760774659}
-  itemController: {fileID: 0}
+  necklace: {fileID: 11400000, guid: ff5aca03d3dc18d488d5f395b70d2628, type: 2}
   moveSpeed: 12
   gravity: -20
   groundCheck: {fileID: 642852328}
@@ -12475,9 +12475,10 @@ MonoBehaviour:
   shoes: {fileID: 1239350899}
   face: {fileID: 1321440195}
   cafeLogo: {fileID: 7900334103587388058, guid: 042283daf4ae2544fbbb7b2b3dca9751, type: 3}
+  necklaceChain: {fileID: 1296863601}
   Necklace: {fileID: 11400000, guid: ff5aca03d3dc18d488d5f395b70d2628, type: 2}
   Shoes: {fileID: 11400000, guid: 709f654b02b0ac64883ba417e05d4b76, type: 2}
-  SummerSunflower: {fileID: 0}
+  NecklaceChain: {fileID: 11400000, guid: 3754dad7e30d1fb4098d1c0dfc7bedcf, type: 2}
   collectedNecklace: 0
   collectedShoes: 0
   collectedSummerSunflower: 0
@@ -16525,7 +16526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9105978591953626656, guid: 1a3a1e65d8a85004bbec356d9e31d066, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9105978591953626684, guid: 1a3a1e65d8a85004bbec356d9e31d066, type: 3}
       propertyPath: m_RootOrder
@@ -21085,6 +21086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3594e37a6f7b47b48ab74c816894a59f, type: 3}
+--- !u!1 &1296863601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6228370659988487899, guid: 42fd8b76d6590a34c81a997698e6ee43, type: 3}
+  m_PrefabInstance: {fileID: 6228370659523468374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1305624148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 120c9c038d1c8c6418af119735890426, type: 3}
