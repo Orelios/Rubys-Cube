@@ -17280,11 +17280,11 @@ MonoBehaviour:
   type: 0
   fragmentType: 0
   npc_Branch: 0
-  detectionRadius: 3
+  detectionRadius: 15
   withinRange: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   NPCLines:
   - "Why don\u2019t you just move in with your Grandmother? You bring shame to this
     family."
@@ -21991,11 +21991,11 @@ MonoBehaviour:
   type: 0
   fragmentType: 0
   npc_Branch: 0
-  detectionRadius: 3
+  detectionRadius: 15
   withinRange: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   NPCLines:
   - Why are you still not at the top of your batch
   branchingDialogue: 0
@@ -36128,11 +36128,11 @@ MonoBehaviour:
   type: 0
   fragmentType: 0
   npc_Branch: 0
-  detectionRadius: 3
+  detectionRadius: 15
   withinRange: 0
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   NPCLines:
   - When will you ever strive to be better?
   branchingDialogue: 0
