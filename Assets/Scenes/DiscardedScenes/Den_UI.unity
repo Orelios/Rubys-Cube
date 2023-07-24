@@ -10280,6 +10280,7 @@ GameObject:
   - component: {fileID: 586457991}
   - component: {fileID: 586457990}
   - component: {fileID: 586457993}
+  - component: {fileID: 586457994}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -10301,6 +10302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 586457991}
   DialogueBox: {fileID: 1326196832}
+  projection: {fileID: 0}
+  itemController: {fileID: 0}
   moveSpeed: 12
   gravity: -20
   groundCheck: {fileID: 642852328}
@@ -10375,6 +10378,19 @@ MonoBehaviour:
   mainCanvas: {fileID: 1024443200}
   inventory: {fileID: 2023241984}
   prompts: {fileID: 2090975974}
+--- !u!114 &586457994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586457989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32b73c7b7d13d540ad2b3aa89694582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 1093299929}
 --- !u!4 &588179643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ae7fb47ef7114d449b2fc18308bf86b, type: 3}
@@ -16227,6 +16243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -21052,6 +21069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -22241,6 +22259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -25104,6 +25123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -29681,6 +29701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -31164,6 +31185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -38922,6 +38944,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+  fragmentType: 0
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0

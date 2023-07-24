@@ -27,7 +27,7 @@ public class OpenSideSelect : MonoBehaviour
             playerCamera.SetActive(false);
 
             UnlockMouse();
-            mainCanvas.SetActive(false);
+            //mainCanvas.SetActive(false);
         }
     }
 
@@ -62,7 +62,7 @@ public class OpenSideSelect : MonoBehaviour
             player.SetActive(true);
 
             LockMouse();
-            EnableMainCanvas();
+            //EnableMainCanvas();
         }
     }
 
