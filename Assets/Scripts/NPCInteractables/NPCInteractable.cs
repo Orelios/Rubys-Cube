@@ -3,7 +3,7 @@ using UnityEngine;
 public enum ObjectType
 {
     NPC,
-    Object  
+    Object
 }
 
 public enum NPCBranchType
@@ -19,12 +19,12 @@ public class NPCInteractable : MonoBehaviour
     public float detectionRadius = 3f;
     public bool withinRange = false;
     public LayerMask playerLayer;
-    public string[] NPCLines;
+    [TextArea(2, 4)] public string[] NPCLines;
     public bool branchingDialogue = false;
     public string branchAnswers1;
     public string branchAnswers2;
-    public string[] branchingLines1;
-    public string[] branchingLines2;
+    [TextArea(2, 4)] public string[] branchingLines1;
+    [TextArea(2, 4)] public string[] branchingLines2;
 
     //Create the Giz1o so you can see the radius
     void OnDrawGizmosSelected()
