@@ -10371,6 +10371,10 @@ MonoBehaviour:
   detectSide: {fileID: 1352037269}
   playerP: {fileID: 586457992}
   spawn: {fileID: 1757576819}
+  openInventory: {fileID: 1093299928}
+  mainCanvas: {fileID: 1024443200}
+  inventory: {fileID: 2023241984}
+  prompts: {fileID: 2090975974}
 --- !u!4 &588179643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1ae7fb47ef7114d449b2fc18308bf86b, type: 3}
@@ -19833,6 +19837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component: {fileID: 2023241984}
   selector: {fileID: 1758208128}
+  activeScene: 0
   prompts: {fileID: 2090975974}
   sideSelect: {fileID: 2039219364}
 --- !u!114 &1093299929

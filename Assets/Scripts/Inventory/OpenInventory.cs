@@ -6,13 +6,14 @@ public class OpenInventory : MonoBehaviour
 {
     public GameObject component;
     public GameObject selector;
-    private bool activeScene = false;
+    public bool activeScene = false;
     [SerializeField] GameObject prompts;
     [SerializeField] GameObject sideSelect;
 
     void Start()
     {
         component.SetActive(false);
+        selector.SetActive(false);
     }
 
     void Update()
