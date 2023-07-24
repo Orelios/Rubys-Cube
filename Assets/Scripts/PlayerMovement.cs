@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
     public GameObject DialogueBox;
+    public Projection1 projection;
 
     public float moveSpeed = 12f;
     public float gravity = -10f;
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
 
-        if (Input.GetKeyDown(KeyCode.E)) //Interaction
+        if (Input.GetKeyDown(KeyCode.E) && isInteracting == false) //Interaction
         {
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             RaycastHit hit;
@@ -76,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
                 if (interactable != null && isInteracting == false && interactable.GetComponent<NPCInteractable>().withinRange == true)
                 {
                     
-                    Debug.Log("Add Focus");
                     isMoveable = false; //Disable Player Movement
                     isInteracting = true;
 
@@ -96,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
         {
             buttonCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+
+            //Set up the text in the buttons
             if (index == 1)
             {
                 button1.GetComponent<DialogueButton>().textComponent.text = interactable.GetComponent<NPCInteractable>().branchAnswers1;
@@ -108,24 +110,39 @@ public class PlayerMovement : MonoBehaviour
                 index = 1;
             }
 
+            //If upper button is presssed
             if (button1.GetComponent<DialogueButton>().pressed == true)
             {
                 DialogueBox.GetComponent<Dialogue>().lines = (string[])interactable.GetComponent<NPCInteractable>().branchingLines1.Clone();
                 DialogueBox.GetComponent<Dialogue>().branching = false;
                 DialogueBox.GetComponent<Dialogue>().endLineChecker = false;
-                DialogueBox.GetComponent<Dialogue>().index = 0;
+
+                InventoryManager.Instance.Search(projection.Shoes, projection.collectedShoes);
+                if (projection.collectedShoes == true)
+                {
+                    DialogueBox.GetComponent<Dialogue>().index = 1;
+                }
+
+                else
+                {
+                    DialogueBox.GetComponent<Dialogue>().index = 0;
+                }
+        
+                isInteracting = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 button1.GetComponent<DialogueButton>().pressed = false;
                 buttonCanvas.SetActive(false);
                 
             }
 
+            //If lower button is presssed
             else if (button2.GetComponent<DialogueButton>().pressed == true)
             {
                 DialogueBox.GetComponent<Dialogue>().lines = (string[])interactable.GetComponent<Collider>().GetComponent<NPCInteractable>().branchingLines2.Clone();
                 DialogueBox.GetComponent<Dialogue>().branching = false;
                 DialogueBox.GetComponent<Dialogue>().endLineChecker = false;  
                 DialogueBox.GetComponent<Dialogue>().index = 0;
+                isInteracting = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 button2.GetComponent<DialogueButton>().pressed = false;
                 buttonCanvas.SetActive(false);

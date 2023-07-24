@@ -24,7 +24,7 @@ public class RaycastController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact();
-                    Debug.Log("It hit");
+                    /*Debug.Log("It hit");*/
                 }
             }
         }

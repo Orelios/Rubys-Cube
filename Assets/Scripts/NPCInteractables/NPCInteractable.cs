@@ -12,9 +12,16 @@ public enum NPCBranchType
     Branch2
 }
 
+public enum FragmentType
+{
+    Necklace,
+    CafeLogo
+}
+
 public class NPCInteractable : MonoBehaviour
 {
     public ObjectType type;
+    public ObjectType fragmentType;
     public BranchType npc_Branch;
     public float detectionRadius = 3f;
     public bool withinRange = false;
@@ -37,6 +44,7 @@ public class NPCInteractable : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius, playerLayer); // Used to check if the player is in the Gizmo
 
+
         //Used to return true or false if the player is within range of the object
         if (colliders.Length > 0)
         {
@@ -48,4 +56,5 @@ public class NPCInteractable : MonoBehaviour
             withinRange = false;
         }
     }
+
 }
