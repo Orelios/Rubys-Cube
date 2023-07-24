@@ -13,12 +13,11 @@ public class OpenSideSelect : MonoBehaviour
     public Transform playerP;
     public Transform spawn;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    [SerializeField] private OpenInventory openInventory;
+    [SerializeField] private GameObject mainCanvas;
+    [SerializeField] private GameObject inventory;
+    [SerializeField] private GameObject prompts;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
@@ -28,6 +27,7 @@ public class OpenSideSelect : MonoBehaviour
             playerCamera.SetActive(false);
 
             UnlockMouse();
+            mainCanvas.SetActive(false);
         }
     }
 
@@ -62,7 +62,16 @@ public class OpenSideSelect : MonoBehaviour
             player.SetActive(true);
 
             LockMouse();
+            EnableMainCanvas();
         }
+    }
 
+    private void EnableMainCanvas()
+    {
+        mainCanvas.SetActive(true);
+        openInventory.activeScene = false;
+        openInventory.selector.SetActive(false);
+        inventory.SetActive(false);
+        prompts.SetActive(true);
     }
 }

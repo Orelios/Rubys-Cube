@@ -5,15 +5,17 @@ using UnityEngine;
 public class OpenInventory : MonoBehaviour
 {
     public GameObject component;
-    public GameObject selector; 
-    private bool activeScene = true; 
-    // Start is called before the first frame update
+    public GameObject selector;
+    public bool activeScene = false;
+    [SerializeField] GameObject prompts;
+    [SerializeField] GameObject sideSelect;
+
     void Start()
     {
-        component.SetActive(true);
+        component.SetActive(false);
+        selector.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q) && activeScene == false)
@@ -21,6 +23,7 @@ public class OpenInventory : MonoBehaviour
             component.SetActive(true);
             selector.SetActive(true);
             activeScene = true;
+            prompts.SetActive(false);
         }
 
         else if(Input.GetKeyDown(KeyCode.Q) && activeScene == true)
@@ -28,6 +31,7 @@ public class OpenInventory : MonoBehaviour
             component.SetActive(false);
             selector.SetActive(false);
             activeScene = false;
+            prompts.SetActive(true);
         }
     }
 }
