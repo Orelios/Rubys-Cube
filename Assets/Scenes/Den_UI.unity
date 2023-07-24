@@ -19833,6 +19833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   component: {fileID: 2023241984}
   selector: {fileID: 1758208128}
+  prompts: {fileID: 2090975974}
+  sideSelect: {fileID: 2039219364}
 --- !u!114 &1093299929
 MonoBehaviour:
   m_ObjectHideFlags: 0
