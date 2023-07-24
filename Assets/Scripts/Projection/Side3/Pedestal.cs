@@ -7,7 +7,6 @@ public class Pedestal : InteractableObject
     public Projection3 projection;
     public ItemClass puzzleItem;
     public GameObject miniItem;
-    private bool itemFound = false;
     public Pedestal otherPedestal1, otherPedestal2;
     public int sequence = 0;
     [SerializeField] private int correctSequence;
@@ -55,7 +54,7 @@ public class Pedestal : InteractableObject
             }
             else
             {
-                //spawn items above pedestal
+                //spawn items above pedestal needs improvement
                 miniItem.SetActive(true);
                 Debug.Log("Incorrect sequence");
             }
@@ -64,12 +63,11 @@ public class Pedestal : InteractableObject
 
     public override void Interact()
     {
-        Debug.Log("interacted");
-        InventoryManager.Instance.SearchFor(puzzleItem, itemFound);
-        if(itemFound == true)
+        if(InventoryManager.Instance.SearchFor(puzzleItem) == true)
         {
+            Debug.Log("interacted");
             InventoryManager.Instance.Remove(puzzleItem);
-            //spawn item in world
+            //spawn item is currently set active only. need to edit pickup to not destroy mini item
             miniItem.SetActive(true);
             itemPlaced = true;
             sequence = 1 + otherPedestal1.CheckItemPlaced() + otherPedestal2.CheckItemPlaced();
