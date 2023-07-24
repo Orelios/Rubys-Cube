@@ -62,6 +62,7 @@ public class Pedestal : InteractableObject
 
     public override void Interact()
     {
+        Debug.Log("interacted");
         InventoryManager.Instance.SearchFor(puzzleItem, itemFound);
         if(itemFound == true)
         {

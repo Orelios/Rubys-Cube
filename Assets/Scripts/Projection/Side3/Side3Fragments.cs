@@ -12,6 +12,8 @@ public class Side3Fragments : ItemClass
         FamilyPhoto, 
         GlassCover, 
         Face, 
+        Pond, 
+        Boulder, 
     }
     public override void UseItem(UseItem calledBy)
     {
