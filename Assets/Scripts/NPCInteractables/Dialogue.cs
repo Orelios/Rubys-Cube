@@ -28,7 +28,6 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         
-
         if (Input.GetMouseButtonDown(0) && endLineChecker == false)
         {
             if (textComponent.text == lines[index])
@@ -87,7 +86,6 @@ public class Dialogue : MonoBehaviour
             if (branching == true)
             {
                 endLineChecker = true;
-                Debug.Log("EndLine");
             }
             else
             {
