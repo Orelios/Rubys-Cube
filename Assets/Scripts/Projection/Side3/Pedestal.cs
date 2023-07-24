@@ -6,6 +6,7 @@ public class Pedestal : InteractableObject
 {
     public Projection3 projection;
     public ItemClass puzzleItem;
+    public GameObject miniItem;
     private bool itemFound = false;
     public Pedestal otherPedestal1, otherPedestal2;
     public int sequence = 0;
@@ -15,7 +16,7 @@ public class Pedestal : InteractableObject
     // Start is called before the first frame update
     void Start()
     {
-        
+        miniItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,6 +56,7 @@ public class Pedestal : InteractableObject
             else
             {
                 //spawn items above pedestal
+                miniItem.SetActive(true);
                 Debug.Log("Incorrect sequence");
             }
         }
@@ -68,6 +70,7 @@ public class Pedestal : InteractableObject
         {
             InventoryManager.Instance.Remove(puzzleItem);
             //spawn item in world
+            miniItem.SetActive(true);
             itemPlaced = true;
             sequence = 1 + otherPedestal1.CheckItemPlaced() + otherPedestal2.CheckItemPlaced();
             CheckSequence();
