@@ -10,7 +10,6 @@ public class Projection1 : InteractableObject
     void Start()
     {
         necklace.SetActive(false);
-        face.SetActive(false);
         cafeLogo.SetActive(false);
     }
 
