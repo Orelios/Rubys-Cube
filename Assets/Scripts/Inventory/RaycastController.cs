@@ -5,28 +5,32 @@ using TMPro;
 
 public class RaycastController : MonoBehaviour
 {
-    [SerializeField]
-    private float raycastDistance = 10.0f;
+    [SerializeField] private float raycastDistance = 10.0f;
+    [SerializeField] LayerMask itemLayer;
+    [SerializeField] LayerMask npcLayer;
+    [SerializeField] LayerMask unlockableLayer = 7;
+    public TextMeshProUGUI interactionInfo;
 
-    [SerializeField]
-    //The layer that will determine what the raycast will hit
-    LayerMask layerMask;
-    //The UI text component that will display the name of the interactable hit
-    // public TextMeshProUGUI interactionInfo;
-
-    // Update is called once per frame
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hit, raycastDistance, layerMask))
+        RaycastHit hit;
+        interactionInfo.enabled = false;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance, itemLayer))
         {
             if(hit.collider.TryGetComponent<InteractableObject>(out InteractableObject interactable))
             {
+                interactionInfo.enabled = true;
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     interactable.Interact();
                     /*Debug.Log("It hit");*/
                 }
             }
+        }
+        else if (Physics.Raycast(transform.position, transform.forward, out hit, raycastDistance, npcLayer))
+        {
+            interactionInfo.enabled = true;
         }
     }
 }
