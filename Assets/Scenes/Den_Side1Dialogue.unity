@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9529,7 +9529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 586457991}
   DialogueBox: {fileID: 1326196832}
-  projection: {fileID: 0}
+  projection: {fileID: 760774659}
+  itemController: {fileID: 0}
   moveSpeed: 12
   gravity: -20
   groundCheck: {fileID: 642852328}
@@ -23362,6 +23363,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5672902522851456669, guid: 7aaa9df04d4c2264e92f73c6a2b318b9, type: 3}
+      propertyPath: itemClass
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fc44f12be83f1b47bdf9e2b34b2b1b2, type: 2}
+    - target: {fileID: 5672902522851456670, guid: 7aaa9df04d4c2264e92f73c6a2b318b9, type: 3}
+      propertyPath: itemClass
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fc44f12be83f1b47bdf9e2b34b2b1b2, type: 2}
     - target: {fileID: 5672902522851456671, guid: 7aaa9df04d4c2264e92f73c6a2b318b9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -27360,7 +27369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  fragmentType: 0
+  fragmentType: 1
   npc_Branch: 0
   detectionRadius: 3
   withinRange: 0
@@ -27380,10 +27389,21 @@ MonoBehaviour:
   branchAnswers2: I don't care enough
   branchingLines1:
   - "That\u2019s an answer you won\u2019t get from me!"
-  - BRuh
   branchingLines2:
   - Suit yourself
-  - What
+--- !u!114 &1659113802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659113796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17655210f86c2974fade29cfff14e97e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemClass: {fileID: 11400000, guid: ff5aca03d3dc18d488d5f395b70d2628, type: 2}
 --- !u!1001 &1663528438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36430,6 +36450,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3858966219023866517, guid: eb5e8f41b71c6d24e9dc75c8e878ab03, type: 3}
   m_PrefabInstance: {fileID: 3604977748848421483}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &543450651614146817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321440195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.589062, y: 1, z: 1}
+  m_Center: {x: 2.79453, y: -5.220141e-10, z: -0.000000023496094}
 --- !u!4 &543450651859988457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5249163907520233477, guid: 75e8b61ddc62bfe4bacc78ca59e29186, type: 3}

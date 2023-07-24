@@ -14,6 +14,7 @@ public enum NPCBranchType
 
 public enum FragmentType
 {
+    None,
     Necklace,
     CafeLogo
 }
@@ -21,7 +22,7 @@ public enum FragmentType
 public class NPCInteractable : MonoBehaviour
 {
     public ObjectType type;
-    public ObjectType fragmentType;
+    public FragmentType fragmentType;
     public BranchType npc_Branch;
     public float detectionRadius = 3f;
     public bool withinRange = false;

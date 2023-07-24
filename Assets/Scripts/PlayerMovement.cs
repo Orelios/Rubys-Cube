@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public GameObject DialogueBox;
     public Projection1 projection;
+    public ItemController itemController;
 
     public float moveSpeed = 12f;
     public float gravity = -10f;
@@ -118,16 +119,13 @@ public class PlayerMovement : MonoBehaviour
                 DialogueBox.GetComponent<Dialogue>().endLineChecker = false;
 
                 InventoryManager.Instance.Search(projection.Shoes, projection.collectedShoes);
-                if (projection.collectedShoes == true)
+                if (projection.collectedShoes == true && interactable.GetComponent<NPCInteractable>().fragmentType == FragmentType.Necklace)
                 {
-                    DialogueBox.GetComponent<Dialogue>().index = 1;
+                    Debug.Log("Necklace");
+                    InventoryManager.Instance.Add(itemController.itemClass);
                 }
 
-                else
-                {
-                    DialogueBox.GetComponent<Dialogue>().index = 0;
-                }
-        
+                DialogueBox.GetComponent<Dialogue>().index = 0;
                 isInteracting = false;
                 Cursor.lockState = CursorLockMode.Locked;
                 button1.GetComponent<DialogueButton>().pressed = false;

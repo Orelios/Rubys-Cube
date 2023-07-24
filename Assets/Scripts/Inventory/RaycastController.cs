@@ -6,7 +6,7 @@ using TMPro;
 public class RaycastController : MonoBehaviour
 {
     [SerializeField]
-    private float raycastDistance = 5.0f;
+    private float raycastDistance = 10.0f;
 
     [SerializeField]
     //The layer that will determine what the raycast will hit
