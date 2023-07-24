@@ -5,14 +5,16 @@ using UnityEngine;
 public class Projection3 : InteractableObject
 {
     public bool isPuzzleComplete = false;
-    public GameObject PhotoFrame, FamilyPhoto, GlassCover;
+    public GameObject FamilyPhoto, Urn, SummerSunflower;
     public Side3Fragments photoFrame, familyPhoto, glassCover; 
     // Start is called before the first frame update
     void Start()
     {
-        PhotoFrame.SetActive(false);
+        //PhotoFrame.SetActive(false);
+        //GlassCover.SetActive(false);
         FamilyPhoto.SetActive(false);
-        GlassCover.SetActive(false);
+        Urn.SetActive(false);
+        SummerSunflower.SetActive(false);
     }
 
     public void SetPuzzleComplete()
@@ -20,9 +22,11 @@ public class Projection3 : InteractableObject
         isPuzzleComplete = true;
         if (isPuzzleComplete == true)
         {
-            PhotoFrame.SetActive(true);
+            //PhotoFrame.SetActive(true);
+            //GlassCover.SetActive(true);
             FamilyPhoto.SetActive(true);
-            GlassCover.SetActive(true);
+            Urn.SetActive(true);
+            SummerSunflower.SetActive(true);
         }
     }
 
