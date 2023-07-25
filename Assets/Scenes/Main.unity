@@ -20146,6 +20146,7 @@ GameObject:
   - component: {fileID: 1093299930}
   - component: {fileID: 1093299929}
   - component: {fileID: 1093299928}
+  - component: {fileID: 1093299931}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -20187,6 +20188,7 @@ MonoBehaviour:
   selector: {fileID: 1758208128}
   selectedSlotNum: 0
   selectedItem: {fileID: 0}
+  itemName: 
   items: []
 --- !u!4 &1093299930
 Transform:
@@ -20203,6 +20205,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1093299931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093299927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad18890d00e3bc047ba87b39c468db70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 1093299929}
+  displayItemName: {fileID: 1467165939}
 --- !u!4 &1096310428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3594e37a6f7b47b48ab74c816894a59f, type: 3}
@@ -25840,6 +25856,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3594e37a6f7b47b48ab74c816894a59f, type: 3}
   m_PrefabInstance: {fileID: 258772697}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1467165939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1467165939, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+  m_PrefabInstance: {fileID: 4087551412181617658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1468087573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 120c9c038d1c8c6418af119735890426, type: 3}
@@ -39768,14 +39795,6 @@ PrefabInstance:
     - target: {fileID: 4087551413070366910, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047957868098213913, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_Name
-      value: Counter3Text
-      objectReference: {fileID: 0}
-    - target: {fileID: 5650152171167920482, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_Name
-      value: Counter1Text
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
