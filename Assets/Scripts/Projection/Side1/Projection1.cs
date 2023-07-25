@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Projection1 : InteractableObject
 {
+    public static Projection1 instance;
     public Projection3 projection3;
-    public GameObject necklace, shoes, face, cafeLogo;
-    public Side1Fragments Necklace, Shoes, SummerSunflower; 
+    public GameObject necklace, shoes, face, cafeLogo, necklaceChain;
+    public Side1Fragments Necklace, Shoes, SummerSunflower, NecklaceChain; 
+
     // Start is called before the first frame update
     void Start()
     {
         necklace.SetActive(false);
         cafeLogo.SetActive(false);
+        instance = this;
     }
 
     public void SetNecklacePuzzleComplete()

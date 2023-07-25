@@ -9982,8 +9982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 586457991}
   DialogueBox: {fileID: 1326196832}
-  projection: {fileID: 760774659}
-  itemController: {fileID: 0}
+  necklace: {fileID: 0}
   moveSpeed: 12
   gravity: -20
   groundCheck: {fileID: 642852328}
@@ -13255,9 +13254,11 @@ MonoBehaviour:
   shoes: {fileID: 1239350899}
   face: {fileID: 1321440195}
   cafeLogo: {fileID: 7900334103587388058, guid: 042283daf4ae2544fbbb7b2b3dca9751, type: 3}
+  necklaceChain: {fileID: 0}
   Necklace: {fileID: 11400000, guid: ff5aca03d3dc18d488d5f395b70d2628, type: 2}
   Shoes: {fileID: 11400000, guid: 709f654b02b0ac64883ba417e05d4b76, type: 2}
   SummerSunflower: {fileID: 11400000, guid: 77d095223aa9b1743a7bc3cd8952d728, type: 2}
+  NecklaceChain: {fileID: 0}
   collectedNecklace: 0
   collectedShoes: 0
   collectedSummerSunflower: 0
@@ -16815,11 +16816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db8d86683038d424daf103daf80196b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.969
+      value: 5.996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db8d86683038d424daf103daf80196b5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.656
+      value: 2.57
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db8d86683038d424daf103daf80196b5, type: 3}
       propertyPath: m_LocalRotation.w
