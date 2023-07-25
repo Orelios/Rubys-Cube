@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Projection1 : InteractableObject
 {
-    public static Projection1 instance; 
-    public GameObject necklace, shoes, face, cafeLogo, necklaceChain;
-    public Side1Fragments Necklace, Shoes, NecklaceChain;
-    private int collected;
-    public bool collectedNecklace = false, collectedShoes = false, collectedSummerSunflower = false;
+    public Projection3 projection3;
+    public GameObject necklace, shoes, face, cafeLogo;
+    public Side1Fragments Necklace, Shoes, SummerSunflower; 
     // Start is called before the first frame update
-
-    public void Awake()
-    {
-        instance = this; 
-    }
     void Start()
     {
         necklace.SetActive(false);
@@ -33,6 +26,9 @@ public class Projection1 : InteractableObject
     {
         cafeLogo.SetActive(true);
     }
+
+    private int collected;
+    public bool collectedNecklace = false, collectedShoes = false, collectedSummerSunflower = false;
 
     public void CheckProjectionFragments()
     {
@@ -60,10 +56,29 @@ public class Projection1 : InteractableObject
     }
     public override void Interact()
     {
-        InventoryManager.Instance.Search(Necklace, collectedShoes);
-        InventoryManager.Instance.Search(Shoes, collectedNecklace);
-        //InventoryManager.Instance.Search(SummerSunflower, collectedSummerSunflower);
+        if (InventoryManager.Instance.SearchFor(Necklace) == true)
+        {
+            collectedNecklace = true;
+            InventoryManager.Instance.Remove(Necklace);
+        }
+        if (InventoryManager.Instance.SearchFor(Shoes) == true)
+        {
+            collectedShoes = true;
+            InventoryManager.Instance.Remove(Shoes);
+        }
+        if (InventoryManager.Instance.SearchFor(SummerSunflower) == true)
+        {
+            collectedSummerSunflower = true;
+            InventoryManager.Instance.Remove(SummerSunflower);
+        }
+
         CheckProjectionFragments();
-        CheckProjectionCompletion(); 
+        CheckProjectionCompletion();
+
+        if (isProjectionComplete == true && projection3.isProjectionComplete == true)
+        {
+            //need to add change scene to end demo. for now debug.log only
+            Debug.Log("Demo complete!");
+        }
     }
 }

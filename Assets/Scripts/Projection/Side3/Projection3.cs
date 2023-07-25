@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projection3 : InteractableObject
 {
+    public Projection1 projection1;
     public bool isPuzzleComplete = false;
     public GameObject FamilyPhoto, Urn, SummerSunflower;
     public Side3Fragments photoFrame, familyPhoto, glassCover; 
@@ -59,10 +60,29 @@ public class Projection3 : InteractableObject
     }
     public override void Interact()
     {
-        InventoryManager.Instance.Search(photoFrame, collectedPhotoFrame);
-        InventoryManager.Instance.Search(familyPhoto, collectedFamilyPhoto);
-        InventoryManager.Instance.Search(glassCover, collectedGlassCover);
+        if (InventoryManager.Instance.SearchFor(photoFrame) == true)
+        {
+            collectedPhotoFrame = true;
+            InventoryManager.Instance.Remove(photoFrame);
+        }
+        if (InventoryManager.Instance.SearchFor(familyPhoto) == true)
+        {
+            collectedFamilyPhoto = true;
+            InventoryManager.Instance.Remove(familyPhoto);
+        }
+        if (InventoryManager.Instance.SearchFor(glassCover) == true)
+        {
+            collectedGlassCover = true;
+            InventoryManager.Instance.Remove(glassCover);
+        }
+
         CheckProjectionFragments();
-        CheckProjectionCompletion(); 
+        CheckProjectionCompletion();
+
+        if(isProjectionComplete == true && projection1.isProjectionComplete == true)
+        {
+            //need to add change scene to end demo. for now debug.log only
+            Debug.Log("Demo complete!");
+        }
     }
 }

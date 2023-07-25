@@ -3051,6 +3051,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4087551411225060248, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 4342165661631793593}
+    - target: {fileID: 4087551411225060250, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4087551413070366906, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
       propertyPath: m_Name
       value: MainCanvas
@@ -10625,7 +10633,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4342165662203046449, guid: 65c9efb97f09bd8408d97310d81723d6, type: 3}
   m_PrefabInstance: {fileID: 4342165661631793592}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4342165661631793593}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cc37ea1dcb653b47942d0fadb64c47b, type: 3}
@@ -27951,6 +27959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3.3 OB Word Wall Side
       objectReference: {fileID: 0}
+    - target: {fileID: 1820949977309514752, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8997288894958524352, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -28014,6 +28026,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8997288894958524352, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
   m_PrefabInstance: {fileID: 1696574149}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1696574151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1820949977309514752, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
+  m_PrefabInstance: {fileID: 1696574149}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1696574152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696574151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a88d76c77313849a734c8a8feef515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  fragmentType: 0
+  npc_Branch: 0
+  detectionRadius: 3
+  withinRange: 0
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  NPCLines:
+  - "\u201CRuby's world once revolved around her parents, of whom they admired and
+    idolized to a fault. To the outside world, they presented a false face of a picture-perfect
+    family."
+  - Ruby's academic brilliance painted her as an exceptional student, always vying
+    for their parents' validation and pride.
+  - However, behind closed doors, despair and disappointment seeped into Ruby's heart
+    as her parents, instead of offering support and encouragement, turned to critics
+    as each confrontation tore away at Ruby's self-esteem.
+  - The weight of unshed tears became unbearable as Ruby felt the suffocating sense
+    of inadequacy.
+  - Ruby's parents would abandon them, leaving them emotionally stranded in a sea
+    of despair, lost and alone. It is only when Ruby's grandmother who would show
+    kindness and compassion towards them would Ruby find solace in her care.
+  - "An unmoving rock they so desperately needed that offered a glimmer of hope in
+    their life.\u201D"
+  branchingDialogue: 0
+  branchAnswers1: 
+  branchAnswers2: 
+  branchingLines1: []
+  branchingLines2: []
 --- !u!1001 &1698557249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35436,6 +35494,11 @@ PrefabInstance:
       objectReference: {fileID: 176239972}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65c9efb97f09bd8408d97310d81723d6, type: 3}
+--- !u!1 &4342165661631793593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4342165662203046461, guid: 65c9efb97f09bd8408d97310d81723d6, type: 3}
+  m_PrefabInstance: {fileID: 4342165661631793592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4814116068058741412
 PrefabInstance:
   m_ObjectHideFlags: 0
