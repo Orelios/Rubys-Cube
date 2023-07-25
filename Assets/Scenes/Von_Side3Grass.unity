@@ -13202,6 +13202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd25c5257f8acc4a9b978d2a954d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projection3: {fileID: 2065202481}
   necklace: {fileID: 9105978591953626656, guid: 1a3a1e65d8a85004bbec356d9e31d066, type: 3}
   shoes: {fileID: 1239350899}
   face: {fileID: 1321440195}
@@ -36653,6 +36654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d354bd0247e984940a06905de38b891f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projection1: {fileID: 760774659}
   isPuzzleComplete: 0
   FamilyPhoto: {fileID: 761461775}
   Urn: {fileID: 1568403582}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Projection1 : InteractableObject
 {
+    public Projection3 projection3;
     public GameObject necklace, shoes, face, cafeLogo;
     public Side1Fragments Necklace, Shoes, SummerSunflower; 
     // Start is called before the first frame update
@@ -72,6 +73,12 @@ public class Projection1 : InteractableObject
         }
 
         CheckProjectionFragments();
-        CheckProjectionCompletion(); 
+        CheckProjectionCompletion();
+
+        if (isProjectionComplete == true && projection3.isProjectionComplete == true)
+        {
+            //need to add change scene to end demo. for now debug.log only
+            Debug.Log("Demo complete!");
+        }
     }
 }
