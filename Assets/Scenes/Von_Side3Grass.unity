@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21048,7 +21048,21 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  NPCLines: []
+  NPCLines:
+  - '1- 2- 3- 4- The beginning of the festival
+
+'
+  - 4- 3- 2- 1- Let the ending fade eternal
+  - 'Skip. Skip. A small child in caring hands
+
+'
+  - 'Slip. Slip. An image is all you had!
+
+'
+  - "To reclaim this, you must find where it\u2019s at\r\n"
+  - 'To have this, complete the broken pendant
+
+'
   branchingDialogue: 0
   branchAnswers1: 
   branchAnswers2: 
@@ -22243,12 +22257,21 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  NPCLines: []
-  branchingDialogue: 0
-  branchAnswers1: 
-  branchAnswers2: 
-  branchingLines1: []
-  branchingLines2: []
+  NPCLines:
+  - "Hey Rubes, your coffee is almost ready, but oh my god! I need to tell you something.\r"
+  branchingDialogue: 1
+  branchAnswers1: Is this really important?
+  branchAnswers2: What is it?
+  branchingLines1:
+  - "Yes it is! Hello? Like it\u2019s Defcon 50 right now, Tyler is dating Dan! Can
+    you believe it? After everything, Tyler picked Dan over me! I lost to a guy-
+    ugh. Jokes on him, Tyler is abso-surely missing out! There\u2019s so much more
+    but I\u2019ll have to catch you up later, your coffee is done. "
+  branchingLines2:
+  - "Tyler and Dan are dating! Can you believe it? And that's not all, rumor has
+    it that Dan bought his way to being number one in the class. You didn\u2019t
+    hear that from me though. I\u2019d spill more deets but we can do that later,
+    your coffee is done."
 --- !u!1001 &1263970668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29567,20 +29590,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   NPCLines:
-  - 1- 2- 3- 4- The beginning of the festival
-  - "4- 3- 2- 1- Let the ending fade eternal\r"
-  - "Skip. Skip. A small child in caring hands\r"
-  - "Slip. Slip. An image is all you had!\r"
-  - "To reclaim this, you must find where it\u2019s at\r"
-  - "To have this, complete the broken pendant\r"
-  - Ruby, you must find the missing piece.
+  - Hello Ruby, did you find the missing piece?
   branchingDialogue: 1
-  branchAnswers1: Where can I find it?
-  branchAnswers2: I don't care enough
+  branchAnswers1: I have it here
+  branchAnswers2: Where can I find it?
   branchingLines1:
-  - "That\u2019s an answer you won\u2019t get from me!"
+  - If you, blink and check your bag
   branchingLines2:
-  - Suit yourself
+  - "That\u2019s an answer you won\u2019t get from me! "
 --- !u!114 &1659113802
 MonoBehaviour:
   m_ObjectHideFlags: 0
