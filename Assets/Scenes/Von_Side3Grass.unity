@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13152,6 +13152,7 @@ GameObject:
   - component: {fileID: 760774657}
   - component: {fileID: 760774656}
   - component: {fileID: 760774659}
+  - component: {fileID: 760774660}
   m_Layer: 3
   m_Name: Projection1
   m_TagString: Untagged
@@ -13259,10 +13260,26 @@ MonoBehaviour:
   Shoes: {fileID: 11400000, guid: 709f654b02b0ac64883ba417e05d4b76, type: 2}
   SummerSunflower: {fileID: 11400000, guid: 77d095223aa9b1743a7bc3cd8952d728, type: 2}
   NecklaceChain: {fileID: 11400000, guid: 3754dad7e30d1fb4098d1c0dfc7bedcf, type: 2}
+  screenManager: {fileID: 760774660}
   collectedNecklace: 0
   collectedShoes: 0
   collectedSummerSunflower: 0
   isProjectionComplete: 0
+--- !u!114 &760774660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760774654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1d1841b7c3bdb4bb4cd7bd2dcd9808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleScreen: 0
+  mainScene: 1
+  endScreen: 2
 --- !u!1 &761461775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1017718923591791533, guid: eb3bffc6c8920ab4e8cc753e6b7e15c1, type: 3}
@@ -37188,6 +37205,7 @@ MonoBehaviour:
   photoFrame: {fileID: 11400000, guid: 37a15d031119ce042bc8ba152124cea8, type: 2}
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
+  screenManager: {fileID: 760774660}
   collectedPhotoFrame: 0
   collectedFamilyPhoto: 0
   collectedGlassCover: 0

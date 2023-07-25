@@ -7,7 +7,8 @@ public class Projection3 : InteractableObject
     public Projection1 projection1;
     public bool isPuzzleComplete = false;
     public GameObject FamilyPhoto, Urn, SummerSunflower;
-    public Side3Fragments photoFrame, familyPhoto, glassCover; 
+    public Side3Fragments photoFrame, familyPhoto, glassCover;
+    public ScreenManager screenManager; 
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +84,7 @@ public class Projection3 : InteractableObject
         {
             //need to add change scene to end demo. for now debug.log only
             Debug.Log("Demo complete!");
+            screenManager.LoadEndScreen(); 
         }
     }
 }

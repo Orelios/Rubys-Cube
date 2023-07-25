@@ -7,7 +7,8 @@ public class Projection1 : InteractableObject
     public static Projection1 instance;
     public Projection3 projection3;
     public GameObject necklace, shoes, face, cafeLogo, necklaceChain;
-    public Side1Fragments Necklace, Shoes, SummerSunflower, NecklaceChain; 
+    public Side1Fragments Necklace, Shoes, SummerSunflower, NecklaceChain;
+    public ScreenManager screenManager; 
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,8 @@ public class Projection1 : InteractableObject
         {
             //need to add change scene to end demo. for now debug.log only
             Debug.Log("Demo complete!");
+            screenManager.LoadEndScreen(); 
+
         }
     }
 }
