@@ -107,7 +107,6 @@ public class InventoryManager : MonoBehaviour
                 break;
             }
         }
-
         items.Remove(slotRemove);
         RefreshUI();
     }
