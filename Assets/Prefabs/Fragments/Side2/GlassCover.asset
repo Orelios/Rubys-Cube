@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GlassCover
   m_EditorClassIdentifier: 
   itemName: Glass Cover
-  itemIcon: {fileID: 21300000, guid: 23e66f7264c74424889342127f229577, type: 3}
+  itemIcon: {fileID: 21300000, guid: 525cc347d8ec79d49bf4bfae134b5fc1, type: 3}
   side3: 2

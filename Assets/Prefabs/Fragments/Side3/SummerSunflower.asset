@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SummerSunflower
   m_EditorClassIdentifier: 
   itemName: Summer Sunflower
-  itemIcon: {fileID: 21300000, guid: 3086d66a563317b40a20a20da2c64ac0, type: 3}
+  itemIcon: {fileID: 21300000, guid: bb35d4cf79e3b54438a1b8dfd6fe15f3, type: 3}
   side1: 2

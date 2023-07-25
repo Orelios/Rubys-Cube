@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Necklace
   m_EditorClassIdentifier: 
   itemName: Necklace
-  itemIcon: {fileID: 21300000, guid: c8a69ecdf54ac8e4b873466605de27ff, type: 3}
+  itemIcon: {fileID: 21300000, guid: 1ef4e7f4886b6a448a8fd416d075f692, type: 3}
   side1: 0

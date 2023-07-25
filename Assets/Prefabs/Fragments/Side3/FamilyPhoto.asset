@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FamilyPhoto
   m_EditorClassIdentifier: 
   itemName: Family Photo
-  itemIcon: {fileID: 21300000, guid: 4a231ba0e81e63849a8f985c228e8acd, type: 3}
+  itemIcon: {fileID: 21300000, guid: 525cc347d8ec79d49bf4bfae134b5fc1, type: 3}
   side3: 1
