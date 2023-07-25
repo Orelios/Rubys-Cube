@@ -37205,6 +37205,7 @@ MonoBehaviour:
   photoFrame: {fileID: 11400000, guid: 37a15d031119ce042bc8ba152124cea8, type: 2}
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
+  screenManager: {fileID: 760774660}
   collectedPhotoFrame: 0
   collectedFamilyPhoto: 0
   collectedGlassCover: 0
