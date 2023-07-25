@@ -84,6 +84,7 @@ public class Projection1 : InteractableObject
             //need to add change scene to end demo. for now debug.log only
             Debug.Log("Demo complete!");
             screenManager.LoadEndScreen(); 
+
         }
     }
 }
