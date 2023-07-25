@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Projection3 : InteractableObject
 {
@@ -8,7 +9,14 @@ public class Projection3 : InteractableObject
     public bool isPuzzleComplete = false;
     public GameObject FamilyPhoto, Urn, SummerSunflower;
     public Side3Fragments photoFrame, familyPhoto, glassCover;
-    public ScreenManager screenManager; 
+    public ScreenManager screenManager;
+
+    public bool isProjectionComplete = false;
+    public bool collectedPhotoFrame = false, collectedFamilyPhoto = false, collectedGlassCover = false;
+    private int collectedFragments;
+    [SerializeField] private int fragmentMaxCount = 3;
+    [SerializeField] private TextMeshProUGUI fragmentCounterText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +25,7 @@ public class Projection3 : InteractableObject
         FamilyPhoto.SetActive(false);
         Urn.SetActive(false);
         SummerSunflower.SetActive(false);
+        fragmentCounterText.text = "0/" + fragmentMaxCount;
     }
 
     public void SetPuzzleComplete()
@@ -32,26 +41,25 @@ public class Projection3 : InteractableObject
         }
     }
 
-    private int collected;
-    public bool collectedPhotoFrame = false, collectedFamilyPhoto = false, collectedGlassCover = false;
     public void CheckProjectionFragments()
     {
-        collected = 0;
+        collectedFragments = 0;
         if (collectedPhotoFrame == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
         if (collectedFamilyPhoto == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
         if (collectedGlassCover == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
+
+        fragmentCounterText.text = collectedFragments + "/" + fragmentMaxCount;
     }
 
-    public bool isProjectionComplete = false;
     public void CheckProjectionCompletion()
     {
         if (collectedPhotoFrame == true && collectedFamilyPhoto == true && collectedGlassCover == true)
@@ -84,7 +92,7 @@ public class Projection3 : InteractableObject
         {
             //need to add change scene to end demo. for now debug.log only
             Debug.Log("Demo complete!");
-            screenManager.LoadEndScreen(); 
+            screenManager.LoadEndScreen();
         }
     }
 }

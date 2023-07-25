@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Projection1 : InteractableObject
 {
@@ -8,7 +9,13 @@ public class Projection1 : InteractableObject
     public Projection3 projection3;
     public GameObject necklace, shoes, face, cafeLogo, necklaceChain;
     public Side1Fragments Necklace, Shoes, SummerSunflower, NecklaceChain;
-    public ScreenManager screenManager; 
+    public ScreenManager screenManager;
+
+
+    private int collectedFragments;
+    public bool collectedNecklace = false, collectedShoes = false, collectedSummerSunflower = false;
+    [SerializeField] private int fragmentMaxCount = 2;
+    [SerializeField] private TextMeshProUGUI fragmentCounterText;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +23,12 @@ public class Projection1 : InteractableObject
         necklace.SetActive(false);
         cafeLogo.SetActive(false);
         instance = this;
+        fragmentCounterText.text = "0/" + fragmentMaxCount;
     }
 
     public void SetNecklacePuzzleComplete()
     {
-        necklace.SetActive(true); 
+        necklace.SetActive(true);
     }
     public void SetFacePuzzleComplete()
     {
@@ -31,24 +39,23 @@ public class Projection1 : InteractableObject
         cafeLogo.SetActive(true);
     }
 
-    private int collected;
-    public bool collectedNecklace = false, collectedShoes = false, collectedSummerSunflower = false;
-
     public void CheckProjectionFragments()
     {
-        collected = 0;
+        collectedFragments = 0;
         if (collectedNecklace == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
         if (collectedShoes == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
         if (collectedSummerSunflower == true)
         {
-            collected += 1;
+            collectedFragments += 1;
         }
+
+        fragmentCounterText.text = collectedFragments + "/" + fragmentMaxCount;
     }
     public bool isProjectionComplete = false;
     public void CheckProjectionCompletion()
@@ -83,7 +90,7 @@ public class Projection1 : InteractableObject
         {
             //need to add change scene to end demo. for now debug.log only
             Debug.Log("Demo complete!");
-            screenManager.LoadEndScreen(); 
+            screenManager.LoadEndScreen();
 
         }
     }
