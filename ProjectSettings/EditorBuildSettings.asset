@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 0354ecf89a14a7e46b18d2ca81389593
   - enabled: 1
-    path: Assets/Scenes/Von_Side3Grass.unity
+    path: Assets/Scenes/Main.unity
     guid: e1672ced8cf87054ba8535e4fa96513e
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
