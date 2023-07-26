@@ -6625,7 +6625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fd25c5257f8acc4a9b978d2a954d8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projection3: {fileID: 0}
+  projection3: {fileID: 804572744}
   necklace: {fileID: 9105978591953626656, guid: 1a3a1e65d8a85004bbec356d9e31d066, type: 3}
   shoes: {fileID: 1239350899}
   face: {fileID: 1321440195}
@@ -14465,7 +14465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d354bd0247e984940a06905de38b891f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projection1: {fileID: 0}
+  projection1: {fileID: 398685037}
   isPuzzleComplete: 0
   FamilyPhoto: {fileID: 717928549}
   Urn: {fileID: 1568403582}
@@ -14473,28 +14473,13 @@ MonoBehaviour:
   photoFrame: {fileID: 11400000, guid: 37a15d031119ce042bc8ba152124cea8, type: 2}
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
-  screenManager: {fileID: 0}
+  screenManager: {fileID: 398685036}
   isProjectionComplete: 0
   collectedPhotoFrame: 0
   collectedFamilyPhoto: 0
   collectedGlassCover: 0
   fragmentMaxCount: 3
   fragmentCounterText: {fileID: 581567579}
---- !u!114 &804572748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804572742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e1d1841b7c3bdb4bb4cd7bd2dcd9808, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  titleScreen: 0
-  mainScene: 1
-  endScreen: 2
 --- !u!1001 &808236930
 PrefabInstance:
   m_ObjectHideFlags: 0
