@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PhotoFrame
   m_EditorClassIdentifier: 
   itemName: Photo Frame
-  itemIcon: {fileID: 21300000, guid: ddf2e76e8a1f88f46ae1e42277850b48, type: 3}
+  itemIcon: {fileID: 21300000, guid: 525cc347d8ec79d49bf4bfae134b5fc1, type: 3}
   side3: 0

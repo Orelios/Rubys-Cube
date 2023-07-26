@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Boulder
   m_EditorClassIdentifier: 
   itemName: Boulder
-  itemIcon: {fileID: 0}
+  itemIcon: {fileID: 21300000, guid: 33b93f879cd38a840bafee631f4d6d55, type: 3}
   side3: 5
