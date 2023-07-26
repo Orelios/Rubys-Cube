@@ -966,5 +966,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreen: 0
-  mainScene: 1
+  mainScene: 3
   endScreen: 2
