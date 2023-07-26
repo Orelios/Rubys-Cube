@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject selector; 
     [SerializeField] private int selectedSlotNum = 0;
     public ItemClass selectedItem;
+    public string itemName; 
 
 
     public List<SlotClass> items = new List<SlotClass>();
@@ -123,5 +124,18 @@ public class InventoryManager : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void SelectedItemName()
+    {
+        try
+        {
+            itemName = items[selectedSlotNum].GetItem().itemName;
+        }
+        catch
+        {
+            itemName = "";
+        }
+      
     }
 }

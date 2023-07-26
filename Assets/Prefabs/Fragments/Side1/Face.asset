@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3d14ab9ff602747b1a3f121dee3ab3, type: 3}
   m_Name: Face
   m_EditorClassIdentifier: 
-  itemName: Face
+  itemName: Mask
   itemIcon: {fileID: 21300000, guid: 77d6198d7f9614147be91471b5ee9355, type: 3}
   side3: 3
