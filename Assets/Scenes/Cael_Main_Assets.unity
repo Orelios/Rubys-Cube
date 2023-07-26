@@ -39975,6 +39975,30 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 586457989}
+    - target: {fileID: 4087551411225060250, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1192.4906
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 118.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.2002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0006799698
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087551412003772715, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4087551413070366906, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
       propertyPath: m_Name
       value: MainCanvas
