@@ -18,13 +18,13 @@ public class Pedestal : InteractableObject
     Quaternion miniPondRotation = Quaternion.Euler(0, 180, 0);
     Vector3 miniBoulderPosition = new Vector3(0.131f, 3.107747f, -9.132f);
     Quaternion miniBoulderRotation = Quaternion.Euler(0, 180, 0);
-    // Start is called before the first frame update
+
     void Start()
     {
-        //miniItem.SetActive(false);
+ 
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         
@@ -76,8 +76,6 @@ public class Pedestal : InteractableObject
             }
             else
             {
-                //spawn items above pedestal needs improvement
-                //miniItem.SetActive(true);
                 InstantiateMiniItem();
                 itemPlaced = false;
                 otherPedestal1.itemPlaced = false;
@@ -93,8 +91,6 @@ public class Pedestal : InteractableObject
         {
             Debug.Log("interacted");
             InventoryManager.Instance.Remove(puzzleItem);
-            //spawn item is currently set active only. need to edit pickup to not destroy mini item
-            //miniItem.SetActive(true);
             InstantiateMiniItem();
             itemPlaced = true;
             sequence = 0;
