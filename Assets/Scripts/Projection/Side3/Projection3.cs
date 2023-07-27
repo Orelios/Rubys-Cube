@@ -11,6 +11,11 @@ public class Projection3 : InteractableObject
     public Side3Fragments photoFrame, familyPhoto, glassCover;
     public ScreenManager screenManager;
 
+    public Material[] material;
+    public Material lambert85;
+    public int ProjectionCombo;
+    Renderer rend;
+
     public bool isProjectionComplete = false;
     public bool collectedPhotoFrame = false, collectedFamilyPhoto = false, collectedGlassCover = false;
     private int collectedFragments;
