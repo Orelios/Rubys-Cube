@@ -69,7 +69,7 @@ public class Projection1 : InteractableObject
         {
             collectedFragments += 1;
         }
-
+        ChangeProjectionCombo();
         fragmentCounterText.text = collectedFragments + "/" + fragmentMaxCount;
     }
     public void ChangeProjectionCombo()
@@ -86,7 +86,22 @@ public class Projection1 : InteractableObject
         {
             ProjectionCombo = 3;
         }
-        
+        if (collectedNecklace == true && collectedSummerSunflower == true)
+        {
+            ProjectionCombo = 4;
+        }
+        if (collectedShoes == true && collectedSummerSunflower == true)
+        {
+            ProjectionCombo = 5;
+        }
+        if (collectedNecklace == true && collectedShoes == true)
+        {
+            ProjectionCombo = 6;
+        }
+        if (collectedNecklace == true && collectedShoes == true && collectedSummerSunflower == true)
+        {
+            ProjectionCombo = 7;
+        }
     }
     public bool isProjectionComplete = false;
     public void CheckProjectionCompletion()
