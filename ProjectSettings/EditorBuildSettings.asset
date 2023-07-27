@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/EndScreen.unity
     guid: 3101aa46363d18d4eae4aae0f517051c
   - enabled: 1
-    path: Assets/Scenes/Cael_Main_Assets.unity
+    path: Assets/Scenes/Cael_Projections_Main.unity
     guid: 33732ca3cc1ee6b4d8893c46d10ffb1f
   m_configObjects: {}
