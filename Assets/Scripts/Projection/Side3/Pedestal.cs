@@ -12,10 +12,12 @@ public class Pedestal : InteractableObject
     [SerializeField] private int correctSequence;
     public bool itemPlaced = false;
     public bool isSequenceCorrect = false;
+    Vector3 miniFacePosition = new Vector3(3.58f, 2.88f, -9.0f);
+    Quaternion miniFaceRotation = Quaternion.Euler(-90,0,0);
     // Start is called before the first frame update
     void Start()
     {
-        miniItem.SetActive(false);
+        //miniItem.SetActive(false);
     }
 
     // Update is called once per frame
@@ -55,7 +57,8 @@ public class Pedestal : InteractableObject
             else
             {
                 //spawn items above pedestal needs improvement
-                miniItem.SetActive(true);
+                //miniItem.SetActive(true);
+                Instantiate(miniItem, miniFacePosition, miniFaceRotation);
                 Debug.Log("Incorrect sequence");
             }
         }
@@ -68,7 +71,8 @@ public class Pedestal : InteractableObject
             Debug.Log("interacted");
             InventoryManager.Instance.Remove(puzzleItem);
             //spawn item is currently set active only. need to edit pickup to not destroy mini item
-            miniItem.SetActive(true);
+            //miniItem.SetActive(true);
+            Instantiate(miniItem, miniFacePosition, miniFaceRotation);
             itemPlaced = true;
             sequence = 1 + otherPedestal1.CheckItemPlaced() + otherPedestal2.CheckItemPlaced();
             CheckSequence();
