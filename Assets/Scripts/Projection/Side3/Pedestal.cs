@@ -79,6 +79,9 @@ public class Pedestal : InteractableObject
                 //spawn items above pedestal needs improvement
                 //miniItem.SetActive(true);
                 InstantiateMiniItem();
+                itemPlaced = false;
+                otherPedestal1.itemPlaced = false;
+                otherPedestal2.itemPlaced = false;
                 Debug.Log("Incorrect sequence");
             }
         }
@@ -94,6 +97,7 @@ public class Pedestal : InteractableObject
             //miniItem.SetActive(true);
             InstantiateMiniItem();
             itemPlaced = true;
+            sequence = 0;
             sequence = 1 + otherPedestal1.CheckItemPlaced() + otherPedestal2.CheckItemPlaced();
             CheckSequence();
             CheckAttempt();
