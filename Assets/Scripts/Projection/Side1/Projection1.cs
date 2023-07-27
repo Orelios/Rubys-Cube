@@ -6,11 +6,16 @@ using TMPro;
 public class Projection1 : InteractableObject
 {
     public static Projection1 instance;
+
     public Projection3 projection3;
     public GameObject necklace, shoes, face, cafeLogo, necklaceChain;
     public Side1Fragments Necklace, Shoes, SummerSunflower, NecklaceChain;
     public ScreenManager screenManager;
 
+    public Material[] material;
+    public Material lambert85;
+    public int ProjectionCombo;
+    Renderer rend;
 
     private int collectedFragments;
     public bool collectedNecklace = false, collectedShoes = false, collectedSummerSunflower = false;
@@ -24,6 +29,16 @@ public class Projection1 : InteractableObject
         cafeLogo.SetActive(false);
         instance = this;
         fragmentCounterText.text = "0/" + fragmentMaxCount;
+
+        ProjectionCombo = 0;
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = lambert85;
+    }
+
+    void Update()
+    {
+        rend.sharedMaterial = material[ProjectionCombo];
     }
 
     public void SetNecklacePuzzleComplete()
@@ -56,6 +71,22 @@ public class Projection1 : InteractableObject
         }
 
         fragmentCounterText.text = collectedFragments + "/" + fragmentMaxCount;
+    }
+    public void ChangeProjectionCombo()
+    {
+        if (collectedNecklace == true)
+        {
+            ProjectionCombo = 1;
+        }
+        if (collectedSummerSunflower == true)
+        {
+            ProjectionCombo = 2;
+        }
+        if (collectedShoes == true)
+        {
+            ProjectionCombo = 3;
+        }
+        
     }
     public bool isProjectionComplete = false;
     public void CheckProjectionCompletion()
