@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreen: 0
-  mainScene: 1
+  mainScene: 3
   endScreen: 2
 --- !u!1 &1056755216
 GameObject:
