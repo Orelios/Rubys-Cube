@@ -6672,6 +6672,17 @@ MonoBehaviour:
   SummerSunflower: {fileID: 11400000, guid: 77d095223aa9b1743a7bc3cd8952d728, type: 2}
   NecklaceChain: {fileID: 11400000, guid: 3754dad7e30d1fb4098d1c0dfc7bedcf, type: 2}
   screenManager: {fileID: 398685036}
+  material:
+  - {fileID: 2100000, guid: 709e8c7447d077646a0bc77482be7372, type: 2}
+  - {fileID: 2100000, guid: c69da47b8f20fe34da8ef5de9f16357f, type: 2}
+  - {fileID: 2100000, guid: 73b88824021da84438fb19f252d5e372, type: 2}
+  - {fileID: 2100000, guid: 7f9ba9f4c79de1d41afc5356bc4e8600, type: 2}
+  - {fileID: 2100000, guid: 092e2e1aef59a4a45ae54a86b382b9cf, type: 2}
+  - {fileID: 2100000, guid: b7186e254d88c574786c29d5077d5b5f, type: 2}
+  - {fileID: 2100000, guid: 2b1c0b0d6c4f0794c9505befb13b1ad5, type: 2}
+  - {fileID: 2100000, guid: bb3e9b121ebb38840841ee06f9143dd0, type: 2}
+  lambert85: {fileID: 9122326816108158572, guid: c29446d617b61a742a8978ed6ffd507f, type: 3}
+  ProjectionCombo: 0
   collectedNecklace: 0
   collectedShoes: 0
   collectedSummerSunflower: 0
@@ -14510,6 +14521,17 @@ MonoBehaviour:
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
   screenManager: {fileID: 398685036}
+  material:
+  - {fileID: 2100000, guid: 3cd204a29a9b7d042937f5405b387e7a, type: 2}
+  - {fileID: 2100000, guid: 0747b364b0b0ec049b651824c4737d3e, type: 2}
+  - {fileID: 2100000, guid: 6a622ca373040044f9a5723b6f3d641d, type: 2}
+  - {fileID: 2100000, guid: 0407ad03ef68e2445ae8bbefe29929ff, type: 2}
+  - {fileID: 2100000, guid: 493ba917bf99f1c4e8f9e42256f1131b, type: 2}
+  - {fileID: 2100000, guid: ce9ad65a9488a8f4c96888f89c14cf90, type: 2}
+  - {fileID: 2100000, guid: 11b7e028cf3b09e41a72570e0926adea, type: 2}
+  - {fileID: 2100000, guid: e2bd5861e0a337e4a8c5817c4d99f9d7, type: 2}
+  lambert87: {fileID: 5512433494918579028, guid: 6276305a22f92c54aabbef804555e3e4, type: 3}
+  ProjectionCombo: 0
   isProjectionComplete: 0
   collectedPhotoFrame: 0
   collectedFamilyPhoto: 0
@@ -16062,6 +16084,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6276305a22f92c54aabbef804555e3e4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6276305a22f92c54aabbef804555e3e4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6276305a22f92c54aabbef804555e3e4, type: 3}
       propertyPath: m_Name
