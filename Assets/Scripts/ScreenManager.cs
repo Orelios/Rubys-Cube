@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ScreenManager : MonoBehaviour
 {
     [SerializeField] private int titleScreen;
+    [SerializeField] private int introScene;
     [SerializeField] private int mainScene;
     [SerializeField] private int endScreen;
     public void LoadMainScene()
@@ -15,6 +16,10 @@ public class ScreenManager : MonoBehaviour
     public void LoadTitleScreen()
     {
         SceneManager.LoadScene(titleScreen);
+    }
+    public void LoadIntroScene()
+    {
+        SceneManager.LoadScene(introScene);
     }
     public void LoadEndScreen()
     {

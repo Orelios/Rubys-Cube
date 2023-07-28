@@ -6646,8 +6646,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreen: 0
-  mainScene: 1
-  endScreen: 2
+  introScene: 1
+  mainScene: 2
+  endScreen: 3
 --- !u!114 &398685037
 MonoBehaviour:
   m_ObjectHideFlags: 0
