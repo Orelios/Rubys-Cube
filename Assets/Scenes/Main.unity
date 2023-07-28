@@ -35675,6 +35675,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3.3 OB Word Wall Side
       objectReference: {fileID: 0}
+    - target: {fileID: 1820949977309514752, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8997288894958524352, guid: 4fc7b0ff9cb7ff544a5c5508a761d9e9, type: 3}
       propertyPath: m_RootOrder
       value: 0
