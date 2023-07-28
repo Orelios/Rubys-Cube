@@ -11,6 +11,11 @@ public class Projection3 : InteractableObject
     public Side3Fragments photoFrame, familyPhoto, glassCover;
     public ScreenManager screenManager;
 
+    public Material[] material;
+    public Material lambert87;
+    public int ProjectionCombo;
+    Renderer rend;
+
     public bool isProjectionComplete = false;
     public bool collectedPhotoFrame = false, collectedFamilyPhoto = false, collectedGlassCover = false;
     private int collectedFragments;
@@ -26,6 +31,16 @@ public class Projection3 : InteractableObject
         Urn.SetActive(false);
         SummerSunflower.SetActive(false);
         fragmentCounterText.text = "0/" + fragmentMaxCount;
+
+        ProjectionCombo = 0;
+        rend = GetComponent<Renderer>();
+        rend.enabled = true;
+        rend.sharedMaterial = lambert87;
+    }
+
+    void Update()
+    {
+        rend.sharedMaterial = material[ProjectionCombo];
     }
 
     public void SetPuzzleComplete()
@@ -56,8 +71,40 @@ public class Projection3 : InteractableObject
         {
             collectedFragments += 1;
         }
-
+        ChangeProjectionCombo();
         fragmentCounterText.text = collectedFragments + "/" + fragmentMaxCount;
+    }
+
+    public void ChangeProjectionCombo()
+    {
+        if (collectedFamilyPhoto == true)
+        {
+            ProjectionCombo = 1;
+        }
+        if (collectedPhotoFrame == true)
+        {
+            ProjectionCombo = 2;
+        }
+        if (collectedGlassCover == true)
+        {
+            ProjectionCombo = 3;
+        }
+        if (collectedGlassCover == true && collectedPhotoFrame == true)
+        {
+            ProjectionCombo = 4;
+        }
+        if (collectedGlassCover == true && collectedFamilyPhoto == true)
+        {
+            ProjectionCombo = 5;
+        }
+        if (collectedPhotoFrame == true && collectedFamilyPhoto == true)
+        {
+            ProjectionCombo = 6;
+        }
+        if (collectedPhotoFrame == true && collectedFamilyPhoto == true && collectedGlassCover == true)
+        {
+            ProjectionCombo = 7;
+        }
     }
 
     public void CheckProjectionCompletion()
