@@ -19,7 +19,7 @@ public class Pedestal : InteractableObject
     Quaternion miniPondRotation = Quaternion.Euler(0, 180, 0);
     Vector3 miniBoulderPosition = new Vector3(0.131f, 3.107747f, -9.132f);
     Quaternion miniBoulderRotation = Quaternion.Euler(0, 180, 0);
-    private float completedYPos = 2.0f;
+    private float completedYPos = -2.5f;
     [SerializeField] private float moveSpeed = 0.01f;
 
     void Start()
@@ -32,9 +32,9 @@ public class Pedestal : InteractableObject
     {
         if(projection.isPuzzleComplete == true)
         {
-            if(transform.position.y < completedYPos)
+            if(transform.position.y > completedYPos)
             {
-                transform.position += new Vector3(0, moveSpeed, 0);
+                transform.position -= new Vector3(0, moveSpeed, 0);
             }
         }
     }
