@@ -30089,7 +30089,8 @@ MonoBehaviour:
   branchAnswers1: I have it here
   branchAnswers2: Where can I find it?
   branchingLines1:
-  - Wonderful! Lemme just... andddd Voila!  Check your bag, got a surprise for ya.
+  - Take heart, dear one. For what is lost can be found and be whole again. Once
+    the search is over, you'd be surprised of what ends up with you afterwards.
   branchingLines2:
   - "That\u2019s an answer you won\u2019t get from me! "
 --- !u!114 &1659113802
