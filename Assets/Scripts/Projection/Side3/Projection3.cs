@@ -112,6 +112,7 @@ public class Projection3 : InteractableObject
         if (collectedPhotoFrame == true && collectedFamilyPhoto == true && collectedGlassCover == true)
         {
             isProjectionComplete = true;
+            ProjectionCompletionPopUp.instance.ProjectionNumber(2); 
         }
     }
     public override void Interact()
