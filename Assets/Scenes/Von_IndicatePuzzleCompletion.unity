@@ -29378,12 +29378,14 @@ MonoBehaviour:
   projection: {fileID: 804572744}
   puzzleItem: {fileID: 11400000, guid: fb42315dbf331354098d2211670f6ea2, type: 2}
   miniItem: {fileID: 7088814328532868407, guid: c15af0dde9a8c95448ba9617d729a40c, type: 3}
+  clone: {fileID: 0}
   otherPedestal1: {fileID: 1651073479}
   otherPedestal2: {fileID: 1907888606}
   sequence: 0
   correctSequence: 3
   itemPlaced: 0
   isSequenceCorrect: 0
+  moveSpeed: 0.01
 --- !u!65 &1637904471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29656,12 +29658,14 @@ MonoBehaviour:
   projection: {fileID: 804572744}
   puzzleItem: {fileID: 11400000, guid: 7fc44f12be83f1b47bdf9e2b34b2b1b2, type: 2}
   miniItem: {fileID: 4005497928213558613, guid: 4a557362364ed8b4a98786226a83e961, type: 3}
+  clone: {fileID: 0}
   otherPedestal1: {fileID: 1637904470}
   otherPedestal2: {fileID: 1907888606}
   sequence: 0
   correctSequence: 1
   itemPlaced: 0
   isSequenceCorrect: 0
+  moveSpeed: 0.01
 --- !u!65 &1651073480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34309,12 +34313,14 @@ MonoBehaviour:
   projection: {fileID: 804572744}
   puzzleItem: {fileID: 11400000, guid: 482afc34f71e23345a2293e572ee82fb, type: 2}
   miniItem: {fileID: 8821926001033770520, guid: 7e204144a113960469f554da737e9409, type: 3}
+  clone: {fileID: 0}
   otherPedestal1: {fileID: 1651073479}
   otherPedestal2: {fileID: 1637904470}
   sequence: 0
   correctSequence: 2
   itemPlaced: 0
   isSequenceCorrect: 0
+  moveSpeed: 0.01
 --- !u!65 &1907888607
 BoxCollider:
   m_ObjectHideFlags: 0

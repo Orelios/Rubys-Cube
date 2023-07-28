@@ -7,6 +7,7 @@ public class Pedestal : InteractableObject
     public Projection3 projection;
     public ItemClass puzzleItem;
     public GameObject miniItem;
+    public GameObject clone;
     public Pedestal otherPedestal1, otherPedestal2;
     public int sequence = 0;
     [SerializeField] private int correctSequence;
@@ -18,6 +19,8 @@ public class Pedestal : InteractableObject
     Quaternion miniPondRotation = Quaternion.Euler(0, 180, 0);
     Vector3 miniBoulderPosition = new Vector3(0.131f, 3.107747f, -9.132f);
     Quaternion miniBoulderRotation = Quaternion.Euler(0, 180, 0);
+    private float completedYPos = 2.0f;
+    [SerializeField] private float moveSpeed = 0.01f;
 
     void Start()
     {
@@ -27,7 +30,13 @@ public class Pedestal : InteractableObject
 
     void Update()
     {
-        
+        if(projection.isPuzzleComplete == true)
+        {
+            if(transform.position.y < completedYPos)
+            {
+                transform.position += new Vector3(0, moveSpeed, 0);
+            }
+        }
     }
 
     public virtual int CheckItemPlaced()
@@ -54,16 +63,21 @@ public class Pedestal : InteractableObject
     {
         if (correctSequence == 1)
         {
-            Instantiate(miniItem, miniFacePosition, miniFaceRotation);
+            clone = Instantiate(miniItem, miniFacePosition, miniFaceRotation);
         }
         else if (correctSequence == 2)
         {
-            Instantiate(miniItem, miniPondPosition, miniPondRotation);
+            clone = Instantiate(miniItem, miniPondPosition, miniPondRotation);
         }
         else if (correctSequence == 3)
         {
-            Instantiate(miniItem, miniBoulderPosition, miniBoulderRotation);
+            clone = Instantiate(miniItem, miniBoulderPosition, miniBoulderRotation);
         }
+    }
+
+    public void DestroyClone()
+    {
+        Destroy(clone);
     }
 
     public void CheckAttempt()
@@ -72,6 +86,9 @@ public class Pedestal : InteractableObject
         {
             if(isSequenceCorrect == true && otherPedestal1.isSequenceCorrect == true && otherPedestal2.isSequenceCorrect == true)
             {
+                DestroyClone();
+                otherPedestal1.DestroyClone();
+                otherPedestal2.DestroyClone();
                 projection.SetPuzzleComplete();
             }
             else
