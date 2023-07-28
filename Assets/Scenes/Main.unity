@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6671,6 +6671,9 @@ MonoBehaviour:
   SummerSunflower: {fileID: 11400000, guid: 77d095223aa9b1743a7bc3cd8952d728, type: 2}
   NecklaceChain: {fileID: 11400000, guid: 3754dad7e30d1fb4098d1c0dfc7bedcf, type: 2}
   screenManager: {fileID: 398685036}
+  material: []
+  lambert85: {fileID: 0}
+  ProjectionCombo: 0
   collectedNecklace: 0
   collectedShoes: 0
   collectedSummerSunflower: 0
@@ -14508,6 +14511,9 @@ MonoBehaviour:
   familyPhoto: {fileID: 11400000, guid: 754b654284f9fd64bbfbe0a12d4ed149, type: 2}
   glassCover: {fileID: 11400000, guid: 473e3f0d17b175c4d80be8b89a740245, type: 2}
   screenManager: {fileID: 398685036}
+  material: []
+  lambert87: {fileID: 0}
+  ProjectionCombo: 0
   isProjectionComplete: 0
   collectedPhotoFrame: 0
   collectedFamilyPhoto: 0
@@ -39979,30 +39985,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 586457989}
-    - target: {fileID: 4087551411225060250, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1192.4906
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 118.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.2002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087551412003772712, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.0006799698
-      objectReference: {fileID: 0}
-    - target: {fileID: 4087551412003772715, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4087551413070366906, guid: d9be49e1703d0dd40a8e908e2c597efb, type: 3}
       propertyPath: m_Name
       value: MainCanvas

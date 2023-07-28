@@ -109,6 +109,7 @@ public class Projection1 : InteractableObject
         if (collectedNecklace == true && collectedShoes == true && collectedSummerSunflower == true)
         {
             isProjectionComplete = true;
+            ProjectionCompletionPopUp.instance.ProjectionNumber(1); 
         }
     }
     public override void Interact()
