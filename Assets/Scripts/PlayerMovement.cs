@@ -96,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             buttonCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true; 
 
             //Set up the text in the buttons
             if (index == 1)
@@ -127,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
                 DialogueBox.GetComponent<Dialogue>().index = 0;
                 isInteracting = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 button1.GetComponent<DialogueButton>().pressed = false;
                 buttonCanvas.SetActive(false);
                 
@@ -141,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
                 DialogueBox.GetComponent<Dialogue>().index = 0;
                 isInteracting = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 button2.GetComponent<DialogueButton>().pressed = false;
                 buttonCanvas.SetActive(false);
                 
