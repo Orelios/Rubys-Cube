@@ -35760,7 +35760,7 @@ MonoBehaviour:
     m_Bits: 128
   NPCLines:
   - Ruby's world once revolved around her parents, of whom they admired and idolized
-    to a fault. To the outside world, they presented a false face of a picture-perfect
+    to a fault. To the outside world, they presented a "false face" of a picture-perfect
     family.
   - "Ruby's academic brilliance painted her as an exceptional student, always vying
     for their parents' validation and pride. \r\n"
@@ -35769,8 +35769,8 @@ MonoBehaviour:
     critics as each confrontation tore away at Ruby''s self-esteem.
 
 '
-  - 'The weight of unshed tears became unbearable as Ruby felt the suffocating sense
-    of inadequacy.
+  - 'The weight of "unshed tears" became unbearable as Ruby felt the suffocating
+    sense of inadequacy.
 
 '
   - 'Ruby''s parents would abandon them, leaving them emotionally stranded in a sea
@@ -35778,8 +35778,8 @@ MonoBehaviour:
     kindness and compassion towards them would Ruby find solace in her care.
 
 '
-  - 'An unmoving rock they so desperately needed that offered a glimmer of hope in
-    their life.
+  - 'An "unmoving rock" they so desperately needed that offered a glimmer of hope
+    in their life.
 
 '
   branchingDialogue: 0
