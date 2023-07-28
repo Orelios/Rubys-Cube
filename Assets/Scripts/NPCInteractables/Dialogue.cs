@@ -28,7 +28,7 @@ public class Dialogue : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetMouseButtonDown(0) && endLineChecker == false)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)) && endLineChecker == false)
         {
             if (textComponent.text == lines[index])
             {
